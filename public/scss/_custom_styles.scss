@@ -8,7 +8,7 @@ body {
 	}
 }
 
-header {
+header, footer {
 	padding: 10px 10px;
 	text-align: center;
 }
@@ -36,20 +36,30 @@ main {
 	&::after {
 		content: "";
 		position: absolute;
-		width: 100%;
+		right: 10px;
+		top: 10px;
+		width: 100px;
+		height: 100px;
 		color: #fff;
-		font-size: 3em;
-		padding: 0 25px;
-		text-shadow: 1px 1px 1px #000;
 		.linkedin-link & {
-			content: "LinkedIn";
+			background: transparent url('/images/linkedin-icon.png') no-repeat;
+		    background-size: cover;		
 		}
 		.github-link & {
-			content: "Github";
+			background: transparent url('/images/github-icon.svg') no-repeat;
+		    background-size: cover;			
 		}
 	}
-	&:hover::before, &:hover::after {
-		opacity: 0;
+	&:hover {
+		&::before {
+			opacity: 0.1;
+		}
+		.linkedin-link &:hover::after {
+			background-image: url('/images/linkedin-icon-blue.png');
+		}
+		.github-link &:hover::after {
+			background-image: url('/images/github-icon-purple.svg');
+		}
 	}
 	.linkedin-link & {
 		background: transparent url('/images/linkedin.png') no-repeat;

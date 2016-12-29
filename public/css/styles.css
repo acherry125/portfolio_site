@@ -37,22 +37,33 @@ main {
 .showcase-tile::after {
   content: "";
   position: absolute;
-  width: 100%;
+  right: 10px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
   color: #fff;
-  font-size: 3em;
-  padding: 0 25px;
 }
 
 .linkedin-link .showcase-tile::after {
-  content: "LinkedIn";
+  background: transparent url("/images/linkedin-icon.png") no-repeat;
+  background-size: cover;
 }
 
 .github-link .showcase-tile::after {
-  content: "Github";
+  background: transparent url("/images/github-icon.svg") no-repeat;
+  background-size: cover;
 }
 
-.showcase-tile:hover::before, .showcase-tile:hover::after {
-  opacity: 0;
+.showcase-tile:hover::before {
+  opacity: 0.1;
+}
+
+.linkedin-link .showcase-tile:hover:hover::after {
+  background-image: url("/images/linkedin-icon-blue.png");
+}
+
+.github-link .showcase-tile:hover:hover::after {
+  background-image: url("/images/github-icon-purple.svg");
 }
 
 .linkedin-link .showcase-tile {
