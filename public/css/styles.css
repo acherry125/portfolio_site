@@ -71,7 +71,7 @@ main {
   width: 100px;
   height: 100px;
   color: #fff;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.67, 1.66);
 }
 
 .showcase-tile > img.hover-icon {
