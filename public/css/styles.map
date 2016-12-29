@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/styles.css",
+	"sources": [
+		"../scss/styles.scss"
+	],
+	"sourcesContent": [
+		"$cherryRed: #6A1616;\r\n\r\nheader {\r\n\tpadding: 10px 10px;\r\n\ttext-align: center;\r\n\ttext-indent: right;\r\n}\r\n\r\nmain {\r\n\tpadding: 0 10px;\r\n}\r\n\r\n.slick-carousel {\r\n\twidth: 90%;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\n.slick-item {\r\n\t/*padding: 0 100px;*/\r\n\tmax-height: 350px;\r\n\tmargin: 0 5px;\r\n\t&:focus, &:active {\r\n\t\toutline: none;\r\n\t}\r\n\timg {\r\n\t\tmax-height: inherit;\r\n\t\tmargin: 0 auto;\r\n\t}\r\n}\r\n\r\n.slick-arrow {\r\n\tdisplay: none !important;\r\n\t&:before {\r\n\t\tcolor: #003763;\r\n\t}\r\n}\r\n\r\n.top-bar {\r\n\tbackground-color: $cherryRed;\r\n\t.dropdown {\r\n\t\tbackground-color: $cherryRed;\r\n\t}\r\n}\r\n\r\n.logo {\r\n\tposition: fixed;\r\n}\r\n\r\n.carousel {\r\n\t.th {\r\n\t\tborder: solid 4px $cherryRed;\r\n\t}\r\n}\r\n\r\n@media only screen and (min-width: 640px) {\r\n\t.slick-arrow {\r\n\t\tdisplay: inline-block !important;\r\n\t}\r\n\t.logo {\r\n\t\tposition: initial;\r\n\t}\r\n}"
+	],
+	"mappings": ";AAEA,AAAA,MAAM,CAAC;EACN,OAAO,EAAE,SAAU;EACnB,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,KAAM;CACnB;;;AAED,AAAA,IAAI,CAAC;EACJ,OAAO,EAAE,MAAO;CAChB;;;AAED,AAAA,eAAe,CAAC;EACf,KAAK,EAAE,GAAI;EACX,WAAW,EAAE,IAAK;EAClB,YAAY,EAAE,IAAK;CACnB;;;AAED,AAAA,WAAW,CAAC;EACX,qBAAqB;EACrB,UAAU,EAAE,KAAM;EAClB,MAAM,EAAE,KAAM;CAQd;;;AAXD,AAAA,WAAW,AAIT,MAAM,EAJR,AAAA,WAAW,AAIA,OAAO,CAAC;EACjB,OAAO,EAAE,IAAK;CACd;;;AANF,AAOC,WAPU,CAOV,GAAG,CAAC;EACH,UAAU,EAAE,OAAQ;EACpB,MAAM,EAAE,MAAO;CACf;;;AAGF,AAAA,YAAY,CAAC;EACZ,OAAO,EAAE,eAAgB;CAIzB;;;AALD,AAAA,YAAY,AAEV,OAAO,CAAC;EACR,KAAK,EAAE,OAAQ;CACf;;;AAGF,AAAA,QAAQ,CAAC;EACR,gBAAgB,EAvCL,OAAO;CA2ClB;;;AALD,AAEC,QAFO,CAEP,SAAS,CAAC;EACT,gBAAgB,EAzCN,OAAO;CA0CjB;;;AAGF,AAAA,KAAK,CAAC;EACL,QAAQ,EAAE,KAAM;CAChB;;;AAED,AACC,SADQ,CACR,GAAG,CAAC;EACH,MAAM,EAAE,KAAK,CAAC,GAAG,CAnDP,OAAO;CAoDjB;;AAGF,MAAM,MAAD,MAAM,MAAM,SAAS,EAAE,KAAK;;EAChC,AAAA,YAAY,CAAC;IACZ,OAAO,EAAE,uBAAwB;GACjC;;EACD,AAAA,KAAK,CAAC;IACL,QAAQ,EAAE,OAAQ;GAClB",
+	"names": []
+}

@@ -1,0 +1,76 @@
+$cherryRed: #d44865;
+$mango: #f7a67b;
+
+body {
+	font-family: "Open Sans", sans-serif;
+	h1, h2, h3, h4, h5, h6, p {
+		font-family: "Open Sans", sans-serif;
+	}
+}
+
+header {
+	padding: 10px 10px;
+	text-align: center;
+}
+
+main {
+	padding: 0 6px 10px 6px;
+}
+
+.showcase-tile {
+	position: relative;
+	width: 90%;
+	max-width: 300px;
+	height: 300px;
+	margin: 10px auto; // center
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: grey;
+		opacity: 0.8;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		color: #fff;
+		font-size: 3em;
+		padding: 0 25px;
+		text-shadow: 1px 1px 1px #000;
+		.linkedin-link & {
+			content: "LinkedIn";
+		}
+		.github-link & {
+			content: "Github";
+		}
+	}
+	&:hover::before, &:hover::after {
+		opacity: 0;
+	}
+	.linkedin-link & {
+		background: transparent url('/images/linkedin.png') no-repeat;
+		background-size: cover;
+	}
+	.github-link & {
+		background: transparent url('/images/github.png') no-repeat;
+		background-size: cover;
+	}
+}
+
+
+@media only screen and (min-width: 40.0625em) {
+	.showcase-tile {
+		height: 35vw;
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+}
+
+@media only screen and (min-width: 64.0625em) {
+
+}
