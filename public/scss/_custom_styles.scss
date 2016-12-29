@@ -32,33 +32,22 @@ main {
 		width: 100%;
 		background-color: grey;
 		opacity: 0.8;
-	}
-	&::after {
-		content: "";
-		position: absolute;
-		right: 10px;
-		top: 10px;
-		width: 100px;
-		height: 100px;
-		color: #fff;
-		.linkedin-link & {
-			background: transparent url('/images/linkedin-icon.png') no-repeat;
-		    background-size: cover;		
-		}
-		.github-link & {
-			background: transparent url('/images/github-icon.svg') no-repeat;
-		    background-size: cover;			
-		}
+		transition: opacity 0.2s;
 	}
 	&:hover {
 		&::before {
 			opacity: 0.1;
+			transition: opacity 0.7s;
 		}
-		.linkedin-link &:hover::after {
-			background-image: url('/images/linkedin-icon-blue.png');
-		}
-		.github-link &:hover::after {
-			background-image: url('/images/github-icon-purple.svg');
+		& > img {
+			right: calc(50% - 50px);
+			top: calc(50% - 50px);
+			&.hover-icon {
+				opacity: 1;
+			}
+			&:default-icon {
+				opacity: 0;
+			}
 		}
 	}
 	.linkedin-link & {
@@ -68,6 +57,19 @@ main {
 	.github-link & {
 		background: transparent url('/images/github.png') no-repeat;
 		background-size: cover;
+	}
+	> img {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		transition: right 0.3s ease-out, top 0.3s ease-out;
+		width: 100px;
+		height: 100px;
+		color: #fff;
+		transition: opacity 0.3s ease-out;
+		&.hover-icon {
+			opacity: 0;
+		}
 	}
 }
 
