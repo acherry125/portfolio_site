@@ -78,13 +78,13 @@ main {
 	&.linkedin-link {
 		background-image:url('/images/linkedin.png');
 		&::after {
-			background:  linear-gradient(45deg, rgba(0,170,255,1) 0%, rgba(0,119,181,1) 100%);
+			background:  linear-gradient(45deg, #00aaff 0%, #005380 100%);
 		}
 	}
 	&.github-link {
 		background-image: url('/images/github.png');
 		&::after {
-			background: linear-gradient(45deg, rgba(189,145,255,1) 0%, rgba(110,84,148,1) 100%);
+			background: linear-gradient(45deg, #bd91ff 0%, #483762 100%);
 		}
 		> .icon.hover {
 			border-radius: 100px;
