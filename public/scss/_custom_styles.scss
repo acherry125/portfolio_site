@@ -62,11 +62,10 @@ main {
 		position: absolute;
 		right: 10px;
 		top: 10px;
-		transition: right 0.3s ease-out, top 0.3s ease-out;
 		width: 100px;
 		height: 100px;
 		color: #fff;
-		transition: opacity 0.3s cubic-bezier(0.42, 0, 0.67, 1.66);
+		transition: right 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), top 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), opacity 0.3s ease-in;
 		&.hover-icon {
 			opacity: 0;
 		}
