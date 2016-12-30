@@ -86,6 +86,10 @@ main {
 		&::after {
 			background: linear-gradient(45deg, rgba(189,145,255,1) 0%, rgba(110,84,148,1) 100%);
 		}
+		> .icon.hover {
+			border-radius: 100px;
+    		background: #fff;
+		}
 	}
 	> .icon { // floating icons
 		position: absolute;
