@@ -5,6 +5,16 @@ body {
 	font-family: "Open Sans", sans-serif;
 	h1, h2, h3, h4, h5, h6, p {
 		font-family: "Open Sans", sans-serif;
+		color: inherit;
+	}
+}
+
+header {
+	color: #fff;
+	background-color: #f90f49;
+	border-bottom: #dcddde;
+	h1 {
+		font-weight: bold;
 	}
 }
 
