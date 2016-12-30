@@ -19,6 +19,7 @@ main {
 
 .showcase-tile {
 	position: relative;
+	display: block;
 	width: 90%;
 	max-width: 300px;
 	height: 300px;
@@ -43,6 +44,7 @@ main {
 	}
 	&:hover {
 		box-shadow: none;
+		border: solid 1px #d3d3d3;
 		&::before, &::after {
 			transition: opacity 0.7s, background 0.3s 0.4s;
 		}
@@ -53,6 +55,8 @@ main {
 			opacity: 0;
 		}
 		> .icon {
+			right: 250px; // for ie (calc value not supported with transitions)
+			top: 250px; // for ie 
 			right: calc(50% - 50px);
 			top: calc(50% - 50px);
 			opacity: 0;
@@ -61,13 +65,13 @@ main {
 			}
 		}
 	}
-	.linkedin-link & {
+	&.linkedin-link {
 		background-image:url('/images/linkedin.png');
 		&::after {
 			background:  linear-gradient(45deg, rgba(0,170,255,1) 0%, rgba(0,119,181,1) 100%);
 		}
 	}
-	.github-link & {
+	&.github-link {
 		background-image: url('/images/github.png');
 		&::after {
 			background: linear-gradient(45deg, rgba(189,145,255,1) 0%, rgba(110,84,148,1) 100%);
@@ -81,6 +85,7 @@ main {
 		height: 100px;
 		color: #fff;
 		z-index: 2;
+		// made using chrome dev tools visualizer
 		transition: right 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), top 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), opacity 0.3s ease-in;
 		&.hover {
 			opacity: 0;
