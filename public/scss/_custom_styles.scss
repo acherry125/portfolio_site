@@ -78,7 +78,7 @@ main {
 	&.linkedin-link {
 		background-image:url('/images/linkedin.png');
 		&::after {
-			background:  linear-gradient(45deg, #00aaff 0%, #005380 100%);
+			background:  linear-gradient(45deg, #00aaff 0%, #005380 60%);
 		}
 	}
 	&.github-link {
