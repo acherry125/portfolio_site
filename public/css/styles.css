@@ -20,60 +20,84 @@ main {
   width: 90%;
   max-width: 300px;
   height: 300px;
-  margin: 10px auto;
+  margin: 20px auto 0 auto;
+  background: transparent top left/cover no-repeat;
+  box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.4);
 }
 
-.showcase-tile::before {
+.showcase-tile::before, .showcase-tile::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: grey;
-  opacity: 0.8;
   transition: opacity 0.2s;
 }
 
+.showcase-tile::before {
+  opacity: 0;
+  background: linear-gradient(#fff, #fff);
+}
+
+.showcase-tile::after {
+  opacity: 0.8;
+}
+
+.showcase-tile:hover {
+  box-shadow: none;
+}
+
+.showcase-tile:hover::before, .showcase-tile:hover::after {
+  transition: opacity 0.7s, background 0.3s 0.4s;
+}
+
 .showcase-tile:hover::before {
-  opacity: 0.1;
-  transition: opacity 0.7s;
+  opacity: 0.3;
 }
 
-.showcase-tile:hover > img {
-  right: calc(50% - 50px);
-  top: calc(50% - 50px);
-}
-
-.showcase-tile:hover > img.hover-icon {
-  opacity: 1;
-}
-
-.showcase-tile:hover > img:default-icon {
+.showcase-tile:hover::after {
   opacity: 0;
 }
 
+.showcase-tile:hover > .icon {
+  right: calc(50% - 50px);
+  top: calc(50% - 50px);
+  opacity: 0;
+}
+
+.showcase-tile:hover > .icon.hover {
+  opacity: 1;
+}
+
 .linkedin-link .showcase-tile {
-  background: transparent url("/images/linkedin.png") no-repeat;
-  background-size: cover;
+  background-image: url("/images/linkedin.png");
+}
+
+.linkedin-link .showcase-tile::after {
+  background: linear-gradient(45deg, #00aaff 0%, #0077b5 100%);
 }
 
 .github-link .showcase-tile {
-  background: transparent url("/images/github.png") no-repeat;
-  background-size: cover;
+  background-image: url("/images/github.png");
 }
 
-.showcase-tile > img {
+.github-link .showcase-tile::after {
+  background: linear-gradient(45deg, #bd91ff 0%, #6e5494 100%);
+}
+
+.showcase-tile > .icon {
   position: absolute;
   right: 10px;
   top: 10px;
   width: 100px;
   height: 100px;
   color: #fff;
+  z-index: 2;
   transition: right 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), top 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), opacity 0.3s ease-in;
 }
 
-.showcase-tile > img.hover-icon {
+.showcase-tile > .icon.hover {
   opacity: 0;
 }
 

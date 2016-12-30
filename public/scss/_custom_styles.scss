@@ -22,51 +22,67 @@ main {
 	width: 90%;
 	max-width: 300px;
 	height: 300px;
-	margin: 10px auto; // center
-	&::before {
+	margin: 20px auto 0 auto; // center
+	background: transparent top left/cover no-repeat;
+	box-shadow: 7px 6px 6px 0px rgba(0,0,0, 0.4);
+	&::before, &::after {
 		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background-color: grey;
-		opacity: 0.8;
 		transition: opacity 0.2s;
 	}
+	&::before {
+		opacity: 0;
+		background: linear-gradient(#fff, #fff);
+	}
+	&::after {
+		opacity: 0.8;
+	}
 	&:hover {
-		&::before {
-			opacity: 0.1;
-			transition: opacity 0.7s;
+		box-shadow: none;
+		&::before, &::after {
+			transition: opacity 0.7s, background 0.3s 0.4s;
 		}
-		& > img {
+		&::before {
+			opacity: 0.3;
+		}
+		&::after {
+			opacity: 0;
+		}
+		> .icon {
 			right: calc(50% - 50px);
 			top: calc(50% - 50px);
-			&.hover-icon {
+			opacity: 0;
+			&.hover {
 				opacity: 1;
-			}
-			&:default-icon {
-				opacity: 0;
 			}
 		}
 	}
 	.linkedin-link & {
-		background: transparent url('/images/linkedin.png') no-repeat;
-		background-size: cover;
+		background-image:url('/images/linkedin.png');
+		&::after {
+			background:  linear-gradient(45deg, rgba(0,170,255,1) 0%, rgba(0,119,181,1) 100%);
+		}
 	}
 	.github-link & {
-		background: transparent url('/images/github.png') no-repeat;
-		background-size: cover;
+		background-image: url('/images/github.png');
+		&::after {
+			background: linear-gradient(45deg, rgba(189,145,255,1) 0%, rgba(110,84,148,1) 100%);
+		}
 	}
-	> img {
+	> .icon { // floating icons
 		position: absolute;
 		right: 10px;
 		top: 10px;
 		width: 100px;
 		height: 100px;
 		color: #fff;
+		z-index: 2;
 		transition: right 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), top 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), opacity 0.3s ease-in;
-		&.hover-icon {
+		&.hover {
 			opacity: 0;
 		}
 	}
