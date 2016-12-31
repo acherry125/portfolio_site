@@ -1,12 +1,26 @@
 $cherryRed: #f90f49;
 $white: #fff;
 $border-grey: #d3d3d3;
+$icon-transition-time: 0.3s;
 $icon-transition-cubic: cubic-bezier(0.42, 0, 0.67, 1.66);
 $mango: #f7a67b;
 
-@mixin squarify($size) {
+// make a square shaped size
+@mixin square-shape($size) {
 	height: $size;
 	width: $size;
+}
+
+// align to the top left corner
+@mixin align-top-left($corner-offset: 0) {
+	top: $corner-offset;
+	left: $corner-offset;
+}
+
+// align to the top right corner
+@mixin align-top-right($corner-offset: 0) {
+	top: $corner-offset;
+	right: $corner-offset;
 }
 
 body {
@@ -35,6 +49,10 @@ main {
 	padding: 0 6px 10px 6px;
 }
 
+a {
+	color: $cherryRed;
+}
+
 .showcase-tile {
 	position: relative;
 	display: block;
@@ -47,10 +65,9 @@ main {
 	&::before, &::after {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
-		@include squarify(100%);
 		transition: opacity 0.2s;
+		@include align-top-left();
+		@include square-shape(100%);
 	}
 	&::before {
 		opacity: 0;
@@ -72,10 +89,8 @@ main {
 			opacity: 0;
 		}
 		> .icon {
-			right: 250px; // for ie (calc value not supported with transitions)
-			top: 250px; // for ie 
-			right: calc(50% - 50px);
-			top: calc(50% - 50px);
+			@include align-top-right(250px); // for ie (calc value not supported with transitions)
+			@include align-top-right(calc(50% - 50px));
 			opacity: 0;
 			&.hover {
 				opacity: 1;
@@ -100,13 +115,12 @@ main {
 	}
 	> .icon { // floating icons
 		position: absolute;
-		right: 10px;
-		top: 10px;
-		@include squarify(100px);
 		color: $white;
 		z-index: 2;
 		// made using chrome dev tools visualizer
-		transition: right 0.3s $icon-transition-cubic, top 0.3s $icon-transition-cubic, opacity 0.3s ease-in;
+		transition: right $icon-transition-time $icon-transition-cubic, top $icon-transition-time $icon-transition-cubic, opacity $icon-transition-time ease-in;
+		@include align-top-right(10px);
+		@include square-shape(100px);
 		&.hover {
 			opacity: 0;
 		}
