@@ -1,5 +1,13 @@
-$cherryRed: #d44865;
+$cherryRed: #f90f49;
+$white: #fff;
+$border-grey: #d3d3d3;
+$icon-transition-cubic: cubic-bezier(0.42, 0, 0.67, 1.66);
 $mango: #f7a67b;
+
+@mixin squarify($size) {
+	height: $size;
+	width: $size;
+}
 
 body {
 	font-family: "Open Sans", sans-serif;
@@ -10,9 +18,9 @@ body {
 }
 
 header {
-	color: #fff;
-	background-color: #f90f49;
-	border-bottom: #dcddde;
+	color: $white;
+	background-color: $cherryRed;
+	border-bottom: 1px solid $border-grey;
 	h1 {
 		font-weight: bold;
 	}
@@ -41,20 +49,19 @@ main {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 100%;
-		width: 100%;
+		@include squarify(100%);
 		transition: opacity 0.2s;
 	}
 	&::before {
 		opacity: 0;
-		background: linear-gradient(#fff, #fff);
+		background-color: $white;
 	}
 	&::after {
 		opacity: 0.8;
 	}
 	&:hover {
 		box-shadow: none;
-		border: solid 1px #d3d3d3;
+		border: solid 1px $border-grey;
 		&::before, &::after {
 			transition: opacity 0.7s, background 0.3s 0.4s;
 		}
@@ -78,29 +85,28 @@ main {
 	&.linkedin-link {
 		background-image:url('/images/linkedin.png');
 		&::after {
-			background:  linear-gradient(45deg, #00aaff 0%, #005380 60%);
+			background:  linear-gradient(60deg, #00aaff 0%, #005380 70%);
 		}
 	}
 	&.github-link {
 		background-image: url('/images/github.png');
 		&::after {
-			background: linear-gradient(45deg, #bd91ff 0%, #483762 100%);
+			background: linear-gradient(60deg, #bd91ff 0%, #483762 80%);
 		}
 		> .icon.hover {
 			border-radius: 100px;
-    		background: #fff;
+    		background: $white;
 		}
 	}
 	> .icon { // floating icons
 		position: absolute;
 		right: 10px;
 		top: 10px;
-		width: 100px;
-		height: 100px;
-		color: #fff;
+		@include squarify(100px);
+		color: $white;
 		z-index: 2;
 		// made using chrome dev tools visualizer
-		transition: right 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), top 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), opacity 0.3s ease-in;
+		transition: right 0.3s $icon-transition-cubic, top 0.3s $icon-transition-cubic, opacity 0.3s ease-in;
 		&.hover {
 			opacity: 0;
 		}
