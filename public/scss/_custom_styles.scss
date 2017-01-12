@@ -1,9 +1,14 @@
 $cherryRed: #f90f49;
+$light-blue: #087E8B;
+$sand: #EDB88B;
+$light-green: #88D18A;
+$mango: #ffe7db;
+$dark-blue: #003049;
 $white: #fff;
+$black: #000;
 $border-grey: #d3d3d3;
 $icon-transition-time: 0.3s;
 $icon-transition-cubic: cubic-bezier(0.42, 0, 0.67, 1.66);
-$mango: #f7a67b;
 
 // make a square shaped size
 @mixin square-shape($size) {
@@ -25,18 +30,10 @@ $mango: #f7a67b;
 
 body {
 	font-family: "Open Sans", sans-serif;
+	background: $white;
 	h1, h2, h3, h4, h5, h6, p {
 		font-family: "Open Sans", sans-serif;
 		color: inherit;
-	}
-}
-
-header {
-	color: $white;
-	background-color: $cherryRed;
-	border-bottom: 1px solid $border-grey;
-	h1 {
-		font-weight: bold;
 	}
 }
 
@@ -51,6 +48,9 @@ main {
 
 a {
 	color: $cherryRed;
+	&:hover {
+		color: $cherryRed;
+	}
 }
 
 .showcase-tile {
@@ -127,6 +127,41 @@ a {
 	}
 }
 
+
+.page-panel {
+	width: 100%;
+	height: 90vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $sand;
+	z-index: 2;
+	margin-top: -150vh;
+	transition: margin-top 1s ease;
+	&:target {
+		margin-top: 0;
+	}
+}
+
+
+.panel-header {
+	color: $white;
+	background-color: $cherryRed;
+	border-bottom: 1px solid $border-grey;
+	padding: 10px 5px;
+	text-align: center;
+	.close-button {
+		background: $white;
+		padding: 5px;
+		font-weight: bold;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		&:hover {
+			background-color: $mango;
+		}
+	}
+}
 
 @media only screen and (min-width: 40.0625em) {
 	.showcase-tile {
