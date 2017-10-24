@@ -5,12 +5,23 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "node builder.js",    
+    "dev-build": "node builder.js --dev",
+    "server": "node server.js",    
+    "start": "npm run build && npm run server",
+    "dev": "npm-run-all -p dev-build server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "node-sass": "^4.5.3"
+  },
+  "devDependencies": {
+    "chokidar": "^1.7.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.2"
   }
 }
