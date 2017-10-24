@@ -1,7 +1,7 @@
 {
-  "name": "ac_portfolio",
+  "name": "jaime_cherry",
   "version": "1.0.0",
-  "description": "This is the website for Alexander Cherry, Web Developer",
+  "description": "This is the website for Jaime Cherry Photography",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
