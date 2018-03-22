@@ -68,13 +68,15 @@ buildScripts();
 
 // If this is being run in production, we don't want to enable the watcher, so end the file here.
 if (!isDevEnv) {
-    console.log(isDevEnv);
+    console.log("Production mode.");
     return;
+} else {
+    console.log("Development mode.")
 }
 
 /**** Initialize watcher ****/
 var watcher = chokidar.watch(
-    ['public/scss/', 'assets/js/'], 
+    ['scss/', 'assets/js/'], 
     {
         // ignore .dotfiles, compiled dir, and css dir, and foundation.plugins.js
         ignored: /(^|.*[\/\\])(\..\w+|(compiled|css|images|OptimizedJS)\/\w*)/,        
@@ -86,7 +88,7 @@ var watcher = chokidar.watch(
 watcher.on('change', 
     watchPath => {
         /*** SASS File is changed ***/
-        if (watchPath.indexOf(path.join('public','scss')) !== -1) {
+        if (watchPath.indexOf(path.join('scss')) !== -1) {
             buildSass();
         }
         /*** JS file is changed ***/
@@ -95,7 +97,7 @@ watcher.on('change',
         } 
         /*** shouldn't be any other type of file in these folders, log to identify ***/
         else {
-            console.log(watchPathpath);
+            console.log(watchPath);
         }
     }
 );
