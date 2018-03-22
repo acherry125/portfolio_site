@@ -17,7 +17,7 @@ var config = {
     /** SASS **/
     sass: {
         inputConfig: {
-            file: path.join('public','scss', 'styles.scss'),
+            file: path.join('scss', 'styles.scss'),
             outputStyle: 'compressed'
         },
         outputPath: path.join('public','css','styles.css')
