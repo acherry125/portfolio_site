@@ -70,9 +70,19 @@ a {
 	}
 }
 
+ul {
+	list-style: none;
+}
+
 .logo {
 	max-width: 400px;
 	width: 25%;
+}
+
+.portfolio-links {
+	max-width: 1000px;
+	margin: 0 auto;
+	font-size: 2rem;
 }
 
 .tiles-section {
