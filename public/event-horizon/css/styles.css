@@ -330,7 +330,9 @@ template {
   display: none;
 }
 
-.search .search__text__submit {
+.search .search__text__submit, .cta {
+  text-decoration: none;
+  line-height: 1;
   height: 35px;
   background-color: #306A82;
   border: 0;
@@ -363,6 +365,10 @@ h1, h2, h3, h4, h5, h6 {
   min-height: calc(100vh - 64px);
   display: flex;
   flex-flow: column nowrap;
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5 {
+  color: #333;
 }
 
 .content-area {
@@ -439,13 +445,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+.cta-wrap {
+  text-align: center;
+  margin: 3rem;
+}
+
+.cta {
+  padding: 8px 20px;
+  border-radius: 15px;
+}
+
 .revolving {
   display: flex;
   flex-flow: column nowrap;
   justify-content: stretch;
   width: 100%;
   overflow: hidden;
-  min-height: calc(100vh - 64px);
 }
 
 .revolving .content-area {
@@ -481,7 +496,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: flex-start;
   align-items: flex-end;
   align-self: flex-start;
-  margin-left: 100px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 2rem;
+  margin: 0 auto;
   transform: translateY(-5px);
   animation: rising-building 4s infinite;
 }
@@ -611,6 +629,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 35em) {
+  .content-area {
+    padding: 0 64px;
+  }
   .nav {
     flex-flow: row nowrap;
   }
