@@ -53,6 +53,10 @@ a:hover {
   color: #f90f49;
 }
 
+.panel-header a {
+  color: #fff;
+}
+
 ul {
   list-style: none;
   padding: 0;
