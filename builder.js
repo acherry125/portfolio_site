@@ -20,7 +20,7 @@ var config = {
             file: path.join('scss', 'styles.scss'),
             outputStyle: 'compressed'
         },
-        outputPath: path.join('public','css','styles.css')
+        outputPath: path.join('public','css', 'custom', 'styles.css')
     }
 }
 
@@ -61,8 +61,8 @@ function buildScripts() {
     console.log('\nScript file changed:');
 }
 
-rimraf.sync(path.join(__dirname, 'public', 'css'));
-mkdirp(path.join(__dirname, 'public', 'css'));
+rimraf.sync(path.join(__dirname, 'public', 'css', 'custom'));
+mkdirp(path.join(__dirname, 'public', 'css', 'custom'));
 buildSass();
 buildScripts();
 

@@ -60,7 +60,7 @@ p {font-size: 2rem;}
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
-	margin: 0.5em;
+	margin: 0.5em 0;
 }
 
 a {
@@ -72,17 +72,23 @@ a {
 
 ul {
 	list-style: none;
+	padding: 0;
 }
 
 .logo {
 	max-width: 400px;
-	width: 25%;
+	width: 50%;
 }
 
 .portfolio-links {
+	font-size: 2rem;
+}
+
+.main-content {
 	max-width: 1000px;
 	margin: 0 auto;
-	font-size: 2rem;
+	padding: 0.5em;
+	font-size: 4rem;
 }
 
 .tiles-section {
@@ -185,10 +191,15 @@ ul {
 @media only screen and (min-width: 40.0625em) {
 	.showcase-tile {
 		height: 35vw;
-		max-width: 400px;
-		max-height: 400px;
+		max-width: 300px;
+		max-height: 120px;
 	}
-
+	.main-content {
+		padding: 0.5em 1em;
+	}
+	.logo {
+		width: 25%;
+	}
 }
 
 @media only screen and (min-width: 64.0625em) {
