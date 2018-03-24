@@ -228,7 +228,13 @@ ul {
   .gallery {
     flex-flow: row wrap;
   }
-  .gallery img {
+  .gallery.half img.override-full, .gallery.third img.override-full {
+    max-width: 100%;
+  }
+  .gallery.half img {
     max-width: 45%;
+  }
+  .gallery.third img {
+    max-width: 30%;
   }
 }

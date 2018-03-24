@@ -219,8 +219,16 @@ ul {
 	}
 	.gallery {
 		flex-flow: row wrap;
-		img {
+		&.half, &.third {
+			img.override-full {
+				max-width: 100%;
+			}
+		}
+		&.half img {
 			max-width: 45%;
+		}
+		&.third img {
+			max-width: 30%;
 		}
 	}
 }
