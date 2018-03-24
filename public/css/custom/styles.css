@@ -194,6 +194,18 @@ ul {
   background-color: #ffe7db;
 }
 
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  margin: 5px 0;
+}
+
 @media only screen and (min-width: 40.0625em) {
   .showcase-tile {
     height: 35vw;
@@ -208,5 +220,11 @@ ul {
   }
   .logo {
     width: 25%;
+  }
+  .gallery {
+    flex-flow: row wrap;
+  }
+  .gallery img {
+    max-width: 45%;
   }
 }
