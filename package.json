@@ -1,27 +1,19 @@
 {
-  "name": "ac_portfolio",
+  "name": "portfolio_site",
   "version": "1.0.0",
-  "description": "This is the website for Alexander Cherry, Web Developer",
-  "main": "server.js",
+  "description": "",
+  "main": "builder.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node builder.js",
-    "dev-build": "node builder.js --dev",
-    "server": "node server.js",
-    "start": "npm run build && npm run server",
-    "dev": "npm-run-all -p dev-build server"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acherry125/portfolio_site.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "node-sass": "^4.5.3"
+  "bugs": {
+    "url": "https://github.com/acherry125/portfolio_site/issues"
   },
-  "devDependencies": {
-    "chokidar": "^1.7.0",
-    "mkdirp": "^0.5.1",
-    "npm-run-all": "^4.1.1",
-    "rimraf": "^2.6.2"
-  }
+  "homepage": "https://github.com/acherry125/portfolio_site#readme"
 }
