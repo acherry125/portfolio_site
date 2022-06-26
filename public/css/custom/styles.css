@@ -1,10 +1,16 @@
+:root {
+  --primary-color: #f0003c;
+  --main-bg-color: var(--primary-color);
+  --white: #fff;
+}
+
 html {
   font-size: 8px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #fff;
+  background: var(--white);
 }
 
 header, footer {
@@ -46,15 +52,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #f90f49;
+  color: var(--main-bg-color);
 }
 
 a:hover {
-  color: #f90f49;
+  color: var(--main-bg-color);
 }
 
 .panel-header a {
-  color: #fff;
+  color: var(--white);
 }
 
 ul {
@@ -109,7 +115,7 @@ video {
 
 .showcase-tile::before {
   opacity: 0;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .showcase-tile::after {
@@ -163,12 +169,12 @@ video {
 
 .showcase-tile.github-link > .icon.hover {
   border-radius: 100px;
-  background: #fff;
+  background: var(--white);
 }
 
 .showcase-tile > .icon {
   position: absolute;
-  color: #fff;
+  color: var(--white);
   z-index: 2;
   transition: right 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), top 0.3s cubic-bezier(0.42, 0, 0.67, 1.66), opacity 0.3s ease-in;
   top: 10px;
@@ -182,24 +188,11 @@ video {
 }
 
 .panel-header {
-  color: #fff;
-  background-color: #f90f49;
+  color: var(--white);
+  background-color: var(--main-bg-color);
   border-bottom: 1px solid #d3d3d3;
   padding: 10px 5px;
   text-align: center;
-}
-
-.panel-header .close-button {
-  background: #fff;
-  padding: 5px;
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-.panel-header .close-button:hover {
-  background-color: #ffe7db;
 }
 
 .gallery {
