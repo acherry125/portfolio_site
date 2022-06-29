@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/acherry125/portfolio_site#readme",
   "dependencies": {
-    "@fastify/static": "^6.4.0"
+    "@fastify/static": "^6.4.0",
+    "fastify": "^4.2.0"
   }
 }
