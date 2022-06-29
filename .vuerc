@@ -1,0 +1,5 @@
+{
+  "customBlocks": {
+    "docs": "./docs-preprocessor.js"
+  }
+}

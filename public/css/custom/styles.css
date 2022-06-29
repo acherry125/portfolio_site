@@ -152,7 +152,7 @@ video {
 }
 
 .showcase-tile.linkedin-link {
-  background-image: url("/images/linkedin.png");
+  background-image: url("../../images/linkedin.png");
 }
 
 .showcase-tile.linkedin-link::after {
@@ -160,7 +160,7 @@ video {
 }
 
 .showcase-tile.github-link {
-  background-image: url("/images/github.png");
+  background-image: url("../../images/github.png");
 }
 
 .showcase-tile.github-link::after {
