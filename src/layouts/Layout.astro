@@ -1,0 +1,111 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Alexander Cherry — Solution Architect & Product Builder',
+  description = 'I build federal-scale systems, ship products from zero to launch, and architect solutions that serve millions. Currently at OneGlobe.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Alexander Cherry" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108515497-1"></script>
+    <script>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).dataLayer = (window as any).dataLayer || [];
+       
+      function gtag(...args: unknown[]) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ((window as any).dataLayer as unknown[]).push(args);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-108515497-1');
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --cherry: #c0392b;
+    --cherry-dark: #a93226;
+    --cherry-light: #e74c3c;
+    --cream: #faf7f2;
+    --ink: #1a1a1a;
+    --ink-muted: rgba(26, 26, 26, 0.4);
+    --ink-subtle: rgba(26, 26, 26, 0.15);
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-sans: 'Syne', system-ui, sans-serif;
+    --font-mono: 'DM Mono', 'Fira Code', monospace;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--cherry);
+    color: var(--cream);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
