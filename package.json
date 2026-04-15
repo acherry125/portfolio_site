@@ -10,5 +10,6 @@
     "web:dev": "yarn workspace @portfolio/web dev",
     "web:build": "yarn workspace @portfolio/web build",
     "web:deploy": "bash scripts/deploy-web.sh"
-  }
+  },
+  "packageManager": "yarn@4.5.1"
 }

@@ -54,7 +54,7 @@ function MockFemaGO() {
               <span>Amount</span>
             </div>
             <div className="fema-table-row">
-              <span>BRIC 2023</span>
+              <span>AFG 2018</span>
               <span className="fema-badge active">Active</span>
               <span>$4.2M</span>
             </div>
@@ -160,12 +160,13 @@ const PROJECTS: WorkProject[] = [
     id: 'fema-go',
     title: 'FEMA',
     titleAccent: 'GO',
-    period: '2020 — 2024',
+    period: '2018 — 2022',
     tags: ['Architecture', 'Full-stack dev', 'Product', 'AWS', 'FedRAMP High'],
     description:
       'Seven years on a grants management platform serving all 50 states. Grew into workstream technical lead overseeing three agile development teams, and the primary SME and go-to voice on UI decisions across a system processing billions in federal funding.',
     impact: [
-      { num: '$3B+', label: 'Grants processed' },
+      { num: '$7B+', label: 'Grants processed' },
+      { num: '40+', label: 'Grant programs supported' },
       { num: '50', label: 'States served' },
     ],
     url: 'https://go.fema.gov',
@@ -177,7 +178,7 @@ const PROJECTS: WorkProject[] = [
     id: 'oneglobeit',
     title: 'OneGlobe',
     titleAccent: 'corporate website',
-    period: '2020 — 2022',
+    period: '2022 — 2026',
     tags: ['Design', 'Development', 'Branding', 'CMS'],
     description:
       'Designed and built the company\'s public-facing corporate site end to end — information architecture, visual design, and development. Clean, fast, and built to communicate technical credibility without overcomplicating it.',
