@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="The City — Alexander Cherry"
+  description="A text-adventure game exploring a war-torn Boston City Hall, built in React."
+>
+  <div class="page">
+    <nav class="page-nav">
+      <a href="/" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Alexander Cherry
+      </a>
+    </nav>
+
+    <header class="project-header">
+      <div class="project-meta">
+        <span class="meta-tag">Game</span>
+        <span class="meta-tag">React</span>
+        <span class="meta-tag">Narrative Design</span>
+      </div>
+      <h1 class="project-title">The <span class="accent">City</span></h1>
+      <p class="project-lead">
+        A text-adventure game set in a war-torn Boston City Hall. Built as a narrative experiment
+        in React — branching storylines, immersive styling, and original writing.
+      </p>
+    </header>
+
+    <section class="project-gallery">
+      <img
+        src="/the-city/images/the-city1.png"
+        alt="The City game screenshot showing the text interface"
+        class="gallery-img"
+        loading="eager"
+      />
+      <img
+        src="/the-city/images/the-city2.png"
+        alt="The City game screenshot showing a story branch"
+        class="gallery-img"
+        loading="lazy"
+      />
+    </section>
+
+    <section class="project-body">
+      <div class="project-section">
+        <h2 class="section-label">About</h2>
+        <p class="body-text">
+          The City is an early-concept text-based adventure game built with React. The narrative
+          follows a city hall employee in Boston after the fall of civilization — exploring the
+          building's corridors, uncovering what happened, and making choices that shape the story.
+        </p>
+        <p class="body-text">
+          The game draws on classic text-adventure conventions — branching paths, inventory logic,
+          environmental storytelling — but reimagines them as a modern web application with
+          CSS-driven atmosphere and animation.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2 class="section-label">Stack</h2>
+        <div class="stack-row">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">CSS Animations</span>
+          <span class="stack-tag">Narrative Design</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <a href="/" class="back-link">← Back to portfolio</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem 6rem;
+  }
+
+  /* Nav */
+  .page-nav {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.5;
+    transition: opacity 200ms var(--ease-out), color 200ms var(--ease-out);
+  }
+
+  .back-link:hover {
+    opacity: 1;
+    color: var(--cherry);
+  }
+
+  /* Header */
+  .project-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .meta-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cherry);
+    padding: 4px 10px;
+    background: rgba(192, 57, 43, 0.06);
+    border-radius: 100px;
+  }
+
+  .project-title {
+    font-family: var(--font-serif);
+    font-size: clamp(52px, 9vw, 88px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .accent {
+    color: var(--cherry);
+  }
+
+  .project-lead {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink);
+    opacity: 0.85;
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  /* Gallery */
+  .project-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(26, 26, 26, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+  }
+
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    background: var(--cream-warm);
+  }
+
+  /* Body */
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-top: 1px solid rgba(26, 26, 26, 0.08);
+    padding-top: 3rem;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cherry);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .body-text {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.85;
+    color: var(--ink);
+    opacity: 0.85;
+    max-width: 620px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .body-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .stack-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .stack-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border: 1px solid rgba(26, 26, 26, 0.12);
+    border-radius: 4px;
+    color: var(--ink);
+    opacity: 0.85;
+  }
+
+  /* Footer */
+  .page-footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(26, 26, 26, 0.08);
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      padding: 1.5rem 1.5rem 5rem;
+    }
+
+    .project-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
