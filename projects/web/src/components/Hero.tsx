@@ -40,7 +40,7 @@ export default function Hero() {
               <a href="#work">Work</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#career">Career</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -60,7 +60,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-tagline reveal r4">
-            From first conversation to shipped product. I build web and mobile applications, AI-powered features, and cloud infrastructure — end to end.
+            From first conversation to shipped product. I build web and mobile applications, AI-powered features, and cloud infrastructure, end to end.
           </p>
         </div>
 

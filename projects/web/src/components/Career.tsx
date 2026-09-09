@@ -8,7 +8,7 @@ const TIMELINE = [
     roleAccent: '&',
     company: 'OneGlobe, LLC',
     description:
-      'Driving innovation inside a federal IT firm. Leading AI platform development, internal tooling, and corporate products while owning solution architecture across multiple proposals.',
+      'Own solution architecture across dozens of federal IT proposals, and lead development of an internal AI platform, tooling, and corporate products.',
     highlights: ['Dozens of Solutions & Proposals', 'Cloud Architecture', 'Data Engineering', 'AI/RAG Platform'],
     active: true,
   },
@@ -19,7 +19,7 @@ const TIMELINE = [
     roleAccent: '&',
     company: 'FEMA GO — OneGlobe, LLC',
     description:
-      'Seven years on a federal grants management platform. Grew into technical lead overseeing three agile development teams, and the primary SME and go-to voice on UI decisions across a system processing billions in federal funding.',
+      'Seven years on a federal grants management platform. Grew into technical lead overseeing three agile development teams, and the go-to voice on UI decisions for a system processing billions in federal funding.',
     highlights: ['UI Architecture', 'Workstream Technical Lead', 'Federal Grant Systems', 'AWS'],
     active: false,
   },
@@ -41,7 +41,7 @@ const CAPABILITIES = [
     num: '01',
     title: 'System',
     titleAccent: 'Architecture',
-    desc: 'Designing cloud-native systems that scale. From data pipelines to microservices to infrastructure — I spec it, build it, and keep it running.',
+    desc: 'Designing cloud-native systems that scale. From data pipelines to microservices to infrastructure, I spec it, build it, and keep it running.',
     tools: ['AWS', 'FedRAMP', 'FISMA', 'Terraform', 'CI/CD'],
   },
   {
@@ -57,7 +57,7 @@ const CAPABILITIES = [
     num: '03',
     title: 'Full-Stack',
     titleAccent: 'Development',
-    desc: 'Building the whole thing. React, Node, Python, databases, APIs — pixel-perfect frontends to solid backend services. I do design and writing too. I ship.',
+    desc: 'Building the whole thing, from React, Node, Python, databases, and APIs to pixel-perfect frontends and solid backend services, plus the design and writing in between. I ship.',
     tools: ['React', 'TypeScript', 'Node', 'Python', 'PostgreSQL', 'Java', 'Go'],
   },
   {
@@ -65,7 +65,7 @@ const CAPABILITIES = [
     num: '04',
     title: 'AI &',
     titleAccent: 'Innovation',
-    desc: 'Building AI features, RAG pipelines, and ML-powered products that actually work. Making emerging tech useful in real applications, not just demos.',
+    desc: 'Building AI features, RAG pipelines, and ML-powered products, shipped into tools people use every day, not stuck in a slide deck.',
     tools: ['Bedrock', 'RAG', 'MLOps', 'LLMs', 'On-device ML'],
   },
 ];

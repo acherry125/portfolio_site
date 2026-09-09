@@ -72,8 +72,8 @@ export default function Footer() {
         </h2>
 
         <p className="contact-sub">
-          App, feature, automation — whatever it is, let's talk about it.
-          I work end to end and I'm easy to work with.
+          App, feature, automation, tell me about it.
+          I work across the whole stack, start to finish, and I'm easy to work with.
         </p>
 
         <nav className="contact-links" aria-label="Contact links">

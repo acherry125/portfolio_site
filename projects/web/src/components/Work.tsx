@@ -163,7 +163,7 @@ const PROJECTS: WorkProject[] = [
     period: '2018 — 2022',
     tags: ['Architecture', 'Full-stack dev', 'Product', 'AWS', 'FedRAMP High'],
     description:
-      'Seven years on a grants management platform serving all 50 states. Grew into workstream technical lead overseeing three agile development teams, and the primary SME and go-to voice on UI decisions across a system processing billions in federal funding.',
+      'Seven years on a grants management platform serving all 50 states. Grew into workstream technical lead overseeing three agile development teams, and the go-to voice on UI decisions for a system processing billions in federal funding.',
     impact: [
       { num: '$7B+', label: 'Grants processed' },
       { num: '40+', label: 'Grant programs supported' },
@@ -181,7 +181,7 @@ const PROJECTS: WorkProject[] = [
     period: '2022 — 2026',
     tags: ['Design', 'Development', 'Branding', 'CMS'],
     description:
-      'Designed and built the company\'s public-facing corporate site end to end — information architecture, visual design, and development. Clean, fast, and built to communicate technical credibility without overcomplicating it.',
+      'Designed and built the company\'s public-facing corporate site end to end: information architecture, visual design, and development. Clean and fast, with nothing extra getting in the way.',
     url: 'https://oneglobeit.com',
     urlLabel: 'Visit oneglobeit.com',
     visual: <MockOneGlobe />,
