@@ -98,7 +98,7 @@ export default function ParticleCanvas() {
         p.vy += (dy / dist) * attract * 0.06;
       }
 
-      // Persistent random drift — always keeps particles moving
+      // Persistent random drift, always keeps particles moving
       p.vx += (Math.random() - 0.5) * 0.18;
       p.vy += (Math.random() - 0.5) * 0.18;
 

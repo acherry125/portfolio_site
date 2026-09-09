@@ -181,7 +181,7 @@ const PROJECTS: WorkProject[] = [
     period: '2022 — 2026',
     tags: ['Design', 'Development', 'Branding', 'CMS'],
     description:
-      'Designed and built the company\'s public-facing corporate site end to end — information architecture, visual design, and development. Clean and fast, with nothing extra getting in the way.',
+      'Designed and built the company\'s public-facing corporate site end to end: information architecture, visual design, and development. Clean and fast, with nothing extra getting in the way.',
     url: 'https://oneglobeit.com',
     urlLabel: 'Visit oneglobeit.com',
     visual: <MockOneGlobe />,

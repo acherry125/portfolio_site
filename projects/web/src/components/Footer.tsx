@@ -72,7 +72,7 @@ export default function Footer() {
         </h2>
 
         <p className="contact-sub">
-          App, feature, automation — tell me about it.
+          App, feature, automation, tell me about it.
           I work across the whole stack, start to finish, and I'm easy to work with.
         </p>
 

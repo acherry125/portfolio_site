@@ -41,7 +41,7 @@ const CAPABILITIES = [
     num: '01',
     title: 'System',
     titleAccent: 'Architecture',
-    desc: 'Designing cloud-native systems that scale. From data pipelines to microservices to infrastructure — I spec it, build it, and keep it running.',
+    desc: 'Designing cloud-native systems that scale. From data pipelines to microservices to infrastructure, I spec it, build it, and keep it running.',
     tools: ['AWS', 'FedRAMP', 'FISMA', 'Terraform', 'CI/CD'],
   },
   {
@@ -57,7 +57,7 @@ const CAPABILITIES = [
     num: '03',
     title: 'Full-Stack',
     titleAccent: 'Development',
-    desc: 'Building the whole thing. React, Node, Python, databases, APIs — pixel-perfect frontends to solid backend services, plus the design and writing in between. I ship.',
+    desc: 'Building the whole thing, from React, Node, Python, databases, and APIs to pixel-perfect frontends and solid backend services, plus the design and writing in between. I ship.',
     tools: ['React', 'TypeScript', 'Node', 'Python', 'PostgreSQL', 'Java', 'Go'],
   },
   {
@@ -65,7 +65,7 @@ const CAPABILITIES = [
     num: '04',
     title: 'AI &',
     titleAccent: 'Innovation',
-    desc: 'Building AI features, RAG pipelines, and ML-powered products — shipped into tools people use every day, not stuck in a slide deck.',
+    desc: 'Building AI features, RAG pipelines, and ML-powered products, shipped into tools people use every day, not stuck in a slide deck.',
     tools: ['Bedrock', 'RAG', 'MLOps', 'LLMs', 'On-device ML'],
   },
 ];
