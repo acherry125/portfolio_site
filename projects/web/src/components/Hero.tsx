@@ -40,7 +40,7 @@ export default function Hero() {
               <a href="#work">Work</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#career">Career</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
