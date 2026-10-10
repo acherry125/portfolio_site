@@ -1,0 +1,676 @@
+.portfolio {
+  width: min(1200px, 100%);
+  background: #f3f1ec;
+  color: #1c1917;
+  font-family: 'Manrope', sans-serif;
+  padding: 28px;
+  box-sizing: border-box;
+  margin: auto;
+  border: 0;
+  box-shadow: none;
+}
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px 22px;
+}
+.portfolio-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font:
+    800 17px/1 'Manrope',
+    sans-serif;
+  letter-spacing: 0.04em;
+  color: #c0392b;
+  min-height: 44px;
+}
+.portfolio-nav {
+  display: flex;
+  gap: 28px;
+  font:
+    600 14px/1 'Manrope',
+    sans-serif;
+  color: #57504a;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-bottom: 0;
+}
+.portfolio-tile {
+  background: #fff;
+  border-radius: 28px;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 0;
+  scroll-margin-top: 24px;
+}
+.portfolio-eyebrow {
+  font:
+    700 11px/1.4 'Manrope',
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  color: #6b635c;
+}
+.portfolio-name {
+  font:
+    800 40px/1.02 'Manrope',
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 18px 0 10px;
+}
+.portfolio-role {
+  font:
+    700 11.5px/1.4 'Manrope',
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b0301f;
+  margin: 0 0 16px;
+  white-space: pre-wrap;
+}
+.portfolio-bio {
+  font:
+    500 16px/1.5 'Manrope',
+    sans-serif;
+  color: #453f3a;
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.portfolio-location {
+  margin: 0 0 22px;
+  font-size: 14px;
+  color: #57504a;
+}
+.portfolio-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.portfolio-primary {
+  background: #c0392b;
+  color: #fff;
+  font:
+    700 14px/1 'Manrope',
+    sans-serif;
+  padding: 14px 20px;
+  border-radius: 999px;
+}
+.portfolio-secondary {
+  background: #ece8e1;
+  color: #1c1917;
+  font:
+    700 14px/1 'Manrope',
+    sans-serif;
+  padding: 14px 20px;
+  border-radius: 999px;
+}
+.portfolio-heading {
+  font:
+    800 34px/1.05 'Manrope',
+    sans-serif;
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+}
+.portfolio-heading-large {
+  font:
+    800 46px/1.02 'Manrope',
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 0 0 12px;
+}
+.portfolio-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.portfolio-chip {
+  font:
+    700 12px/1 'Manrope',
+    sans-serif;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  line-height: 1.3;
+}
+.studio {
+  background: #7a1f2b;
+  color: #f8f1ed;
+  padding: 34px;
+}
+.studio-eyebrow {
+  color: #f0c9c2;
+}
+.studio-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.studio-intro {
+  font:
+    500 16px/1.55 'Manrope',
+    sans-serif;
+  color: #f0dcd6;
+  margin: 0;
+  max-width: 560px;
+  text-wrap: pretty;
+}
+.studio-products {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+.product {
+  background: #621722;
+  border-radius: 20px;
+  padding: 22px;
+}
+.product-shelflife {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.product-status {
+  font:
+    700 10.5px/1.4 'Manrope',
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f0c9c2;
+  margin: 0 0 8px;
+}
+.product-name {
+  font:
+    800 28px/1.05 'Manrope',
+    sans-serif;
+  letter-spacing: -0.03em;
+  margin: 0 0 8px;
+}
+.product-description {
+  font:
+    500 14px/1.5 'Manrope',
+    sans-serif;
+  color: #f0dcd6;
+  margin: 0 0 14px;
+  text-wrap: pretty;
+}
+.product-link {
+  font:
+    700 13.5px/1 'Manrope',
+    sans-serif;
+}
+.product-screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 380px;
+}
+.fema {
+  background: #16233a;
+  color: #eef2f8;
+  padding: 36px;
+}
+.fema-eyebrow {
+  color: #b7c6dd;
+}
+.fema-intro {
+  font:
+    500 16px/1.55 'Manrope',
+    sans-serif;
+  color: #d5deeb;
+  margin: 0;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+.platform-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 12px 0 26px;
+}
+.platform-metric {
+  background: #22314d;
+  border-radius: 18px;
+  padding: 18px;
+}
+.platform-value {
+  font:
+    800 34px/1 'Manrope',
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 0 0 6px;
+}
+.platform-label {
+  font:
+    600 12.5px/1.35 'Manrope',
+    sans-serif;
+  color: #b7c6dd;
+  margin: 0;
+}
+.fema-contribution {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  padding: 10px 0;
+  border-top: 1px solid #2c3d5c;
+  font:
+    500 14.5px/1.5 'Manrope',
+    sans-serif;
+  color: #d5deeb;
+}
+.fema-number {
+  font-weight: 800;
+  color: #b7c6dd;
+}
+.salt {
+  background: #3b2a52;
+  color: #f1ecf7;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: center;
+}
+.salt-eyebrow {
+  color: #cdbfe3;
+}
+.salt-description {
+  font:
+    500 15px/1.5 'Manrope',
+    sans-serif;
+  color: #ddd3ec;
+  margin: 0;
+  text-wrap: pretty;
+}
+.history-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  padding: 11px 0;
+  border-top: 1px solid #ece8e1;
+  font:
+    600 14.5px/1.4 'Manrope',
+    sans-serif;
+}
+.history-year {
+  color: #6b635c;
+  font-weight: 700;
+}
+.history-detail {
+  color: #6b635c;
+  font-weight: 500;
+  display: inline;
+}
+.contact {
+  background: #c0392b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 36px;
+  gap: 24px;
+}
+.contact-links {
+  display: flex;
+  gap: 28px;
+  font:
+    700 15px/1 'Manrope',
+    sans-serif;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+.studio-header > a {
+  justify-self: start;
+}
+.product-proof {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid #944652;
+  color: #f0dcd6;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.product-proof-value {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0 0 5px;
+}
+.product-proof p {
+  margin: 0;
+}
+.oneglobe {
+  background: #e9e4da;
+  padding: 36px;
+}
+.oneglobe .portfolio-heading {
+  max-width: 760px;
+}
+.oneglobe-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.oneglobe-projects h3 {
+  font-size: 21px;
+  margin: 0 0 12px;
+  letter-spacing: -0.025em;
+}
+.oneglobe-projects p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: #453f3a;
+}
+.oneglobe .portfolio-chip {
+  background: #fff8;
+}
+.oneglobe-award {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 22px;
+}
+.oneglobe-award strong {
+  font-size: 36px;
+  letter-spacing: -0.04em;
+}
+.oneglobe-award span {
+  max-width: 180px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #57504a;
+}
+.fema-scope {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 26px;
+}
+.fema-scope > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.fema-scope strong {
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+.fema-scope span {
+  color: #b7c6dd;
+  font-size: 14px;
+}
+.platform-scale {
+  margin-top: 26px;
+}
+.portfolio-nav a {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+.portfolio a:focus-visible {
+  outline: 3px solid #c0392b;
+  outline-offset: 5px;
+}
+.studio a:focus-visible,
+.fema a:focus-visible,
+.contact a:focus-visible {
+  outline-color: #fff;
+}
+.portfolio a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.identity-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #f3f1ec;
+}
+.portfolio-grid > .identity {
+  grid-column: span 4;
+}
+.portfolio-grid > .studio {
+  grid-column: span 8;
+}
+.portfolio-grid > .oneglobe,
+.portfolio-grid > .fema,
+.portfolio-grid > .contact {
+  grid-column: span 12;
+}
+.portfolio-grid > .salt,
+.portfolio-grid > .history {
+  grid-column: span 6;
+}
+.product-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 390/844;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+  background: #fff;
+}
+.product-badge {
+  display: block;
+  border-radius: 50%;
+}
+.portfolio-experiments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px 8px 4px;
+  font-size: 13px;
+  color: #57504a;
+}
+.portfolio-experiments a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.portfolio p {
+  text-wrap: pretty;
+}
+.portfolio h3 {
+  line-height: 1.2;
+}
+.contact-links a {
+  padding: 8px 0;
+}
+.fema ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.portfolio-actions a {
+  line-height: 1.2;
+}
+.portfolio :where(a) {
+  overflow-wrap: anywhere;
+}
+.portfolio :where(h1, h2, h3) {
+  text-wrap: balance;
+}
+#main-content:focus {
+  outline: none;
+}
+.studio-header > .product-link {
+  font-size: 13px;
+}
+.product-proof .product-proof-value {
+  margin: 0 0 5px;
+}
+@media (max-width: 1000px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .studio-products {
+    grid-template-columns: 1.4fr 1fr;
+  }
+  .portfolio-name {
+    max-width: none;
+  }
+  .portfolio-header {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .salt {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    align-items: start;
+    flex-direction: column;
+  }
+  .portfolio-grid > .identity,
+  .portfolio-grid > .studio,
+  .portfolio-grid > .oneglobe,
+  .portfolio-grid > .fema,
+  .portfolio-grid > .salt,
+  .portfolio-grid > .history,
+  .portfolio-grid > .contact {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio {
+    padding: 16px;
+  }
+  .portfolio-grid {
+    gap: 14px;
+  }
+  .portfolio-tile,
+  .studio,
+  .fema,
+  .oneglobe {
+    padding: 24px;
+    border-radius: 24px;
+  }
+  .portfolio-header {
+    padding: 6px 4px 22px;
+    align-items: center;
+  }
+  .portfolio-nav {
+    gap: 18px;
+    font-size: 13px;
+  }
+  .portfolio-logo {
+    gap: 8px;
+  }
+  .portfolio-logo svg {
+    width: 48px;
+  }
+  .portfolio-name {
+    font-size: 38px;
+  }
+  .portfolio-heading,
+  .portfolio-heading-large {
+    font-size: 30px;
+    line-height: 1.12;
+  }
+  .studio-products,
+  .oneglobe-projects,
+  .salt {
+    grid-template-columns: 1fr;
+  }
+  .studio-products {
+    gap: 14px;
+  }
+  .product {
+    padding: 20px;
+  }
+  .oneglobe-projects {
+    gap: 28px;
+  }
+  .product-proof-value {
+    font-size: 28px;
+  }
+  .platform-metric {
+    padding: 14px;
+  }
+  .platform-value {
+    font-size: 28px;
+  }
+  .platform-label {
+    font-size: 12px;
+  }
+  .platform-metrics {
+    gap: 8px;
+  }
+  .fema-scope strong {
+    font-size: 25px;
+  }
+  .history-row {
+    grid-template-columns: 95px 1fr;
+    font-size: 13px;
+    gap: 10px;
+  }
+  .contact-links {
+    gap: 18px;
+    font-size: 14px;
+  }
+  .studio-products,
+  .oneglobe-projects {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+@media (max-width: 400px) {
+  .portfolio {
+    padding: 12px;
+  }
+  .portfolio-tile {
+    padding: 20px;
+  }
+  .portfolio-nav {
+    gap: 14px;
+  }
+  .platform-metrics {
+    grid-template-columns: 1fr;
+  }
+  .platform-metric {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .platform-value {
+    margin: 0;
+    min-width: 85px;
+  }
+  .portfolio-primary,
+  .portfolio-secondary {
+    padding: 13px 16px;
+  }
+  .oneglobe-award {
+    align-items: start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .fema-scope {
+    grid-template-columns: 1fr;
+  }
+  .product-proof {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -4,11 +4,15 @@ import glassesIcon from '../assets/glasses.svg?url';
 interface Props {
   title?: string;
   description?: string;
+  portfolio?: boolean;
+  skipTarget?: string;
 }
 
 const {
   title = 'Alexander Cherry — Developer & Consultant',
   description = 'From first conversation to shipped product. Full-stack development, AI-powered features, and cloud infrastructure, end to end.',
+  portfolio = false,
+  skipTarget = 'work',
 } = Astro.props;
 ---
 
@@ -36,12 +40,21 @@ const {
       rel="stylesheet"
     />
 
+    {
+      portfolio && (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      )
+    }
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108515497-1"></script>
     <script>
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).dataLayer = (window as any).dataLayer || [];
-       
+
       function gtag(...args: unknown[]) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ((window as any).dataLayer as unknown[]).push(args);
@@ -50,8 +63,8 @@ const {
       gtag('config', 'UA-108515497-1');
     </script>
   </head>
-  <body>
-    <a href="#work" class="skip-link">Skip to main content</a>
+  <body style={portfolio ? 'background: #f3f1ec' : undefined}>
+    <a href={`#${skipTarget}`} class="skip-link">Skip to main content</a>
     <slot />
   </body>
 </html>
@@ -138,6 +151,9 @@ const {
   }
 
   @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
     *,
     *::before,
     *::after {
