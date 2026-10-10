@@ -79,8 +79,8 @@ export default function Portfolio() {
                     A social book-tracking app, built and launched as the only engineer on a
                     serverless AWS backend.
                   </p>
-                  <a href="https://theshelflifeapp.com" className="product-link">
-                    theshelflifeapp.com →
+                  <a href="/shelflife" className="product-link">
+                    See More
                   </a>
                 </div>
                 <div className="product-screenshots">
@@ -139,9 +139,6 @@ export default function Portfolio() {
                 <p className="product-description">
                   An offline-first trip planner for groups, from idea to near-beta in under a month.
                 </p>
-                <a href="https://wandercrewapp.com/waitlist/" className="product-link">
-                  Join the waitlist →
-                </a>
               </article>
             </div>
             <div className="portfolio-chips">
@@ -351,7 +348,8 @@ export default function Portfolio() {
           </section>
         </main>
         <footer className="portfolio-experiments">
-          <span>Earlier experiments</span>
+          <span>Selected projects</span>
+          <a href="/shelflife">ShelfLife</a>
           <a href="/the-city">The City</a>
           <a href="/worship">Worship</a>
         </footer>
