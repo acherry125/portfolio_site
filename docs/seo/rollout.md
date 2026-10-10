@@ -16,7 +16,7 @@ The build generates sharing cards and responsive screenshot files from existing 
 
 ## PostHog setup
 
-The production build defaults to the supplied portfolio public project token and `https://us.i.posthog.com`. The public configuration endpoint accepted that token on US Cloud; no test analytics events were sent. The token is safe for browser code. `PUBLIC_POSTHOG_KEY` and `PUBLIC_POSTHOG_HOST` remain optional build-time overrides for a different project; never use a personal API key (`phx_...`). The connected MCP account did not expose this project, so cookieless ingestion settings still require confirmation in its dashboard.
+The production build defaults to the supplied portfolio public project token and `https://us.i.posthog.com`. The public configuration endpoint accepted that token on US Cloud; no test analytics events were sent. The token is safe for browser code. `PUBLIC_POSTHOG_KEY` and `PUBLIC_POSTHOG_HOST` remain optional build-time overrides for a different project; never use a personal API key (`phx_...`). The portfolio project is 657492; the user confirmed cookieless ingestion is enabled. The connected MCP account does not expose this project, so live ingestion must be verified in its dashboard.
 
 **Before deployment, enable cookieless event ingestion in that project's settings.** The SDK uses `cookieless_mode: 'always'`; PostHog ignores these events unless this setting is enabled. See [PostHog's configuration reference](https://posthog.com/docs/libraries/js/config).
 
@@ -28,7 +28,7 @@ The integration records page views, page leaves (for engagement reporting), and 
 - `contact_click` for an ordinary email link
 - `case_study_click` with a destination path for a portfolio case study
 
-Autocapture, session recording, surveys, heatmaps, automatic performance/error collection, person profiles, and feature-flag requests are disabled. No `identify` calls are made. Query strings/fragments are removed from page URLs, referrers are reduced to their origin, and an event/property allowlist excludes email addresses, subjects, link text, and campaign parameters. Referring domains remain useful; detailed UTM campaign attribution is intentionally unavailable.
+Autocapture, session recording, surveys, heatmaps, automatic performance/error collection, person profiles, and feature-flag requests are disabled. No `identify` calls are made. Query strings/fragments are removed from page URLs, referrers are reduced to their origin, and an event/property allowlist excludes email addresses, subjects, link text, and campaign parameters. The allowlist preserves the SDK’s raw user agent and host, which PostHog requires to compute cookieless identity; the capture endpoint supplies the connection IP. Referring domains remain useful; detailed UTM campaign attribution is intentionally unavailable.
 
 After deployment, verify real page views and each link action in the Portfolio project's activity feed. In Web Analytics, use the three custom events as conversion goals. Email clicks measure an attempted handoff, not a sent message or a completed recruiter conversation. Local checks do not prove live ingestion.
 
