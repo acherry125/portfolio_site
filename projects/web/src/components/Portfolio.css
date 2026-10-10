@@ -473,8 +473,9 @@
   font-size: 13px;
   color: #57504a;
 }
-.portfolio-experiments span {
-  margin-right: auto;
+.portfolio-experiments a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .portfolio p {
   text-wrap: pretty;
