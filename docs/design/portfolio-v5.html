@@ -1,0 +1,165 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bento v5 — Alexander Cherry</title><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>          .D{width:1200px;background:#f3f1ec;color:#1c1917;font-family:'Manrope',sans-serif;padding:28px;box-sizing:border-box}
+          .D-top{display:flex;justify-content:space-between;align-items:center;padding:6px 8px 22px}
+          .D-logo{display:flex;align-items:center;gap:12px;font:800 17px/1 'Manrope',sans-serif;letter-spacing:.04em;color:#c0392b}
+          .D-links{display:flex;gap:28px;font:600 14px/1 'Manrope',sans-serif;color:#57504a}
+          .D-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+          .D-t{background:#fff;border-radius:28px;padding:30px;box-sizing:border-box;overflow:hidden}
+          .D-k{font:700 11px/1.4 'Manrope',sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;color:#6b635c}
+          .D-name{font:800 40px/1.02 'Manrope',sans-serif;letter-spacing:-.035em;margin:18px 0 10px}
+          .D-roles{font:700 11.5px/1.4 'Manrope',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#b0301f;margin:0 0 16px;white-space:pre-wrap}
+          .D-bio{font:500 16px/1.5 'Manrope',sans-serif;color:#453f3a;margin:0 0 22px;text-wrap:pretty}
+          .D-btns{display:flex;gap:10px;flex-wrap:wrap}
+          .D-btn{background:#c0392b;color:#fff;font:700 14px/1 'Manrope',sans-serif;padding:14px 20px;border-radius:999px}
+          .D-btn2{background:#ece8e1;color:#1c1917;font:700 14px/1 'Manrope',sans-serif;padding:14px 20px;border-radius:999px}
+          .D-h2{font:800 34px/1.05 'Manrope',sans-serif;letter-spacing:-.03em;margin:0 0 10px}
+          .D-h2b{font:800 46px/1.02 'Manrope',sans-serif;letter-spacing:-.035em;margin:0 0 12px}
+          .D-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+          .D-chip{font:700 12px/1 'Manrope',sans-serif;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.14)}
+          .D-big{font:800 48px/1 'Manrope',sans-serif;letter-spacing:-.04em;margin:0 0 8px}
+          .D-cap{font:600 13.5px/1.4 'Manrope',sans-serif;color:#57504a;margin:0}
+
+          .D-fb{background:#7a1f2b;color:#f8f1ed;padding:34px}
+          .D-fbk{color:#f0c9c2}
+          .D-fbtop{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start}
+          .D-fbp{font:500 16px/1.55 'Manrope',sans-serif;color:#f0dcd6;margin:0;max-width:560px;text-wrap:pretty}
+          .D-prods{display:grid;grid-template-columns:7fr 4fr;gap:14px;margin-top:24px}
+          .D-prod{background:#621722;border-radius:20px;padding:22px}
+          .D-slin{display:grid;grid-template-columns:5fr 6fr;gap:20px;align-items:center}
+          .D-pk{font:700 10.5px/1.4 'Manrope',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#f0c9c2;margin:0 0 8px}
+          .D-pn{font:800 28px/1.05 'Manrope',sans-serif;letter-spacing:-.03em;margin:0 0 8px}
+          .D-pb{font:500 14px/1.5 'Manrope',sans-serif;color:#f0dcd6;margin:0 0 14px;text-wrap:pretty}
+          .D-pl{font:700 13.5px/1 'Manrope',sans-serif}
+          .D-shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+
+          .D-navy{background:#16233a;color:#eef2f8;padding:36px}
+          .D-navk{color:#b7c6dd}
+          .D-navp{font:500 16px/1.55 'Manrope',sans-serif;color:#d5deeb;margin:0;max-width:640px;text-wrap:pretty}
+          .D-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+          .D-numc{background:#22314d;border-radius:18px;padding:18px}
+          .D-numv{font:800 34px/1 'Manrope',sans-serif;letter-spacing:-.035em;margin:0 0 6px}
+          .D-numl{font:600 12.5px/1.35 'Manrope',sans-serif;color:#b7c6dd;margin:0}
+          .D-li{display:grid;grid-template-columns:26px 1fr;padding:10px 0;border-top:1px solid #2c3d5c;font:500 14.5px/1.5 'Manrope',sans-serif;color:#d5deeb}
+          .D-lin{font-weight:800;color:#b7c6dd}
+          .D-stack{display:grid;grid-template-rows:1fr 1fr;gap:16px}
+
+          .D-salt{background:#3b2a52;color:#f1ecf7;display:grid;grid-template-columns:6fr 5fr;gap:26px;align-items:center}
+          .D-saltk{color:#cdbfe3}
+          .D-saltp{font:500 15px/1.5 'Manrope',sans-serif;color:#ddd3ec;margin:0;text-wrap:pretty}
+          .D-shot{width:100%;aspect-ratio:4/3;border-radius:16px;color:#ddd3ec}
+          .D-row{display:grid;grid-template-columns:110px 1fr;padding:11px 0;border-top:1px solid #ece8e1;font:600 14.5px/1.4 'Manrope',sans-serif}
+          .D-yr{color:#6b635c;font-weight:700}
+          .D-sub{color:#6b635c;font-weight:500}
+          .D-red{background:#c0392b;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 36px}
+          .D-redl{display:flex;gap:28px;font:700 15px/1 'Manrope',sans-serif}
+
+.D{width:min(1200px,100%);margin:auto}.D-t{min-width:0;scroll-margin-top:24px}.D-fbtop{grid-template-columns:1fr}.D-fbtop>a{justify-self:start}.D-prods{grid-template-columns:minmax(0,7fr) minmax(0,4fr)}.D-slin{grid-template-columns:1fr}.D-shots{max-width:380px}.D-proof{display:grid;grid-template-columns:1fr 1.35fr;gap:16px;padding-top:18px;border-top:1px solid #944652;color:#f0dcd6;font-size:12px;line-height:1.45}.D-proofv{font-size:30px;font-weight:800;line-height:1.1;color:#fff;margin:0 0 5px}.D-proof p{margin:0}.D-og{background:#e9e4da;padding:36px}.D-og .D-h2{max-width:760px}.D-ogcols{display:grid;grid-template-columns:1fr 1fr;gap:36px}.D-ogcols h3{font-size:21px;margin:0 0 12px;letter-spacing:-.025em}.D-ogcols p{font-size:16px;line-height:1.6;margin:0;color:#453f3a}.D-og .D-chip{background:#fff8}.D-award{display:flex;gap:16px;align-items:center;margin-top:22px}.D-award strong{font-size:36px;letter-spacing:-.04em}.D-award span{max-width:180px;font-size:13px;line-height:1.4;color:#57504a}.D-scope{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}.D-scope>div{display:flex;flex-direction:column;gap:6px}.D-scope strong{font-size:28px;letter-spacing:-.03em}.D-scope span{color:#b7c6dd;font-size:14px}.D-scale{margin-top:26px}.D-nums{grid-template-columns:repeat(3,1fr);margin:12px 0 26px}.D-red{gap:24px}.D-redl{flex-wrap:wrap;line-height:1.5}.D-links a{padding:10px 0}a:focus-visible{outline:3px solid #c0392b;outline-offset:5px}.D-fb a:focus-visible,.D-navy a:focus-visible,.D-red a:focus-visible{outline-color:#fff}html{scroll-behavior:smooth}body{margin:0;background:#f3f1ec}*{box-sizing:border-box}
+@media(max-width:1000px){.D-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.D-grid>.D-t{grid-column:span 2!important}.D-prods{grid-template-columns:1.4fr 1fr}.D-name{max-width:none}.D-top{padding-left:4px;padding-right:4px}.D-salt{grid-template-columns:1fr 1fr}.D-red{align-items:start;flex-direction:column}}
+@media(max-width:600px){.D{padding:16px}.D-grid{gap:14px}.D-t,.D-fb,.D-navy,.D-og{padding:24px;border-radius:24px}.D-top{padding:6px 4px 22px}.D-links{gap:18px;font-size:13px}.D-logo{gap:8px}.D-logo svg{width:48px}.D-name{font-size:38px}.D-h2,.D-h2b{font-size:30px;line-height:1.12}.D-prods,.D-ogcols,.D-salt{grid-template-columns:1fr}.D-prods{gap:14px}.D-prod{padding:20px}.D-ogcols{gap:28px}.D-proofv{font-size:28px}.D-numc{padding:14px}.D-numv{font-size:28px}.D-numl{font-size:12px}.D-nums{gap:8px}.D-scope strong{font-size:25px}.D-row{grid-template-columns:95px 1fr;font-size:13px;gap:10px}.D-redl{gap:18px;font-size:14px}.D-shot{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.ph{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:20px;background:#fff}.badge{display:block;border-radius:50%}.slot{display:flex;align-items:center;justify-content:center;text-align:center;font:12px/1.5 system-ui;background:repeating-linear-gradient(135deg,#ddd 0 8px,#eee 8px 16px)}</style></head><body><div class="D" data-screen-label="Bento v5">
+              <div class="D-top">
+                <a class="D-logo" href="#work">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="62" height="22" viewBox="0 0 180 64" fill="none" aria-label="AC glasses logo">
+                    <g><path d="M10 16 C10 8, 28 2, 56 2 C72 2, 80 5, 84 10 L84 18 C82 36, 78 48, 76 52 C74 57, 64 60, 48 60 C32 60, 16 57, 14 52 C10 44, 8 24, 10 16Z" stroke="#C0392B" stroke-width="3.5" fill="rgba(192,57,43,0.04)" stroke-linejoin="round"></path></g>
+                    <g transform="translate(180,0) scale(-1,1)"><path d="M10 16 C10 8, 28 2, 56 2 C72 2, 80 5, 84 10 L84 18 C82 36, 78 48, 76 52 C74 57, 64 60, 48 60 C32 60, 16 57, 14 52 C10 44, 8 24, 10 16Z" stroke="#C0392B" stroke-width="3.5" fill="rgba(192,57,43,0.04)" stroke-linejoin="round"></path></g>
+                    <path d="M84 12 Q90 6, 96 12" stroke="#C0392B" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
+                    <ellipse cx="8" cy="12" rx="5" ry="2.5" fill="#C0392B"></ellipse>
+                    <ellipse cx="172" cy="12" rx="5" ry="2.5" fill="#C0392B"></ellipse>
+                  </svg>
+                  <span>AC</span>
+                </a>
+                <div class="D-links"><a href="#work">Work</a><a href="#history">History</a><a href="#contact">Contact</a></div>
+              </div>
+              <div class="D-grid">
+
+                <div class="D-t" style="grid-column:span 4">
+                  <div class="slot" style="width:84px;height:84px;border-radius:50%">portrait</div>
+                  <h1 class="D-name">Alexander Cherry</h1>
+                  <p class="D-roles">Forward-deployed engineer</p>
+                  <p class="D-bio">I turn conversations into working software, from architecture and UI/UX to hands-on delivery. Eight years in production software, across federal platforms and consumer apps. Arlington, VA.</p>
+                  <div class="D-btns"><a class="D-btn" href="#work">Résumé (PDF)</a><a class="D-btn2" href="mailto:acherry125@gmail.com">Email</a><a class="D-btn2" href="https://www.linkedin.com/in/alexander-cherry">LinkedIn</a><a class="D-btn2" href="https://github.com/acherry125">GitHub</a></div>
+                </div>
+
+                <div id="work" class="D-t D-fb" style="grid-column:span 8">
+                  <div class="D-fbtop">
+                    <div>
+                      <p class="D-k D-fbk">Founder &amp; lead engineer · 2026 — now</p>
+                      <h2 class="D-h2">Fisherbird Software</h2>
+                      <p class="D-fbp">A two-person software studio I started with my wife. I lead the engineering, architecture and UI/UX for our apps, and build custom software for businesses.</p>
+                    </div>
+                    <a class="D-pl" href="https://www.fisherbirdsoftware.com" style="white-space:nowrap;padding-top:2px">fisherbirdsoftware.com →</a>
+                  </div>
+                  <div class="D-prods">
+                    <div class="D-prod D-slin">
+                      <div>
+                        <p class="D-pk">Live · iOS, Android, web</p>
+                        <p class="D-pn">ShelfLife</p>
+                        <p class="D-pb">A social book-tracking app, built and launched as the only engineer on a serverless AWS backend.</p>
+                        <a class="D-pl" href="https://theshelflifeapp.com">theshelflifeapp.com →</a>
+                      </div>
+                      <div class="D-shots">
+                        <img class="ph" src="https://www.fisherbirdsoftware.com/shelflife/screenshot-home-feed-01.webp" alt="ShelfLife home feed" />
+                        <img class="ph" src="https://www.fisherbirdsoftware.com/shelflife/screenshot-shelf-export-01.webp" alt="ShelfLife shelf export" />
+                        <img class="ph" src="https://www.fisherbirdsoftware.com/shelflife/screenshot-signal-explainer.webp" alt="ShelfLife Book Signal" />
+                      </div>
+<div class="D-proof"><div><p class="D-proofv">4.8★</p><p>App Store rating</p></div><div><p class="D-proofv">~3,500</p><p>installs in the two months after v1</p></div></div>
+                    </div>
+                    <div class="D-prod">
+                      <img class="badge" src="https://www.fisherbirdsoftware.com/wandercrew/wandercrew-badge.webp" alt="" style="width:64px;margin-bottom:14px" />
+                      <p class="D-pk">Near beta</p>
+                      <p class="D-pn">WanderCrew</p>
+                      <p class="D-pb">An offline-first trip planner for groups, from idea to near-beta in under a month.</p>
+                      <a class="D-pl" href="https://wandercrewapp.com/waitlist/">Join the waitlist →</a>
+                    </div>
+                  </div>
+                  <div class="D-chips"><span class="D-chip">React Native / Expo</span><span class="D-chip">TypeScript</span><span class="D-chip">AWS Lambda</span><span class="D-chip">DynamoDB</span><span class="D-chip">Pulumi</span><span class="D-chip">App Store &amp; Google Play releases</span></div>
+                </div>
+
+                <section class="D-t D-og" style="grid-column:span 12" aria-labelledby="oneglobe-title">
+<p class="D-k">OneGlobe LLC · 2022–2026 · Business Development Solution Architect</p>
+<h2 class="D-h2" id="oneglobe-title">From federal requirements to working software</h2>
+<p class="D-bio">I worked with federal stakeholders to shape technical proposals and built working applications for live evaluations.</p>
+<div class="D-ogcols"><div><h3>SBA evaluation application</h3><p>Built the demo application that helped OneGlobe win a seat on the SBA Enterprise Agile Delivery Services BPA. The first call order followed a week later.</p><div class="D-award"><strong>$200M</strong><span>BPA ceiling · OneGlobe awarded a seat</span></div></div>
+<div><h3>Tech Challenge Platform</h3><p>Top contributor to a reusable reference architecture for government technical challenges, with a React client, Java Spring services, and deployment through Terraform, Pulumi or AWS CDK.</p></div></div>
+<div class="D-chips"><span class="D-chip">React</span><span class="D-chip">TypeScript</span><span class="D-chip">Java Spring</span><span class="D-chip">USWDS</span><span class="D-chip">Infrastructure as code</span></div></section>
+<div class="D-t D-navy" style="grid-column:span 12">
+                  <p class="D-k D-navk">OneGlobe LLC · 2018–2021 · Workstream technical lead</p>
+                  <h2 class="D-h2b">FEMA GO</h2>
+                  <p class="D-navp">FEMA's grants management platform, built to FedRAMP High. I oversaw UI delivery across the platform and led the fire-grants workstream.</p>
+                  <div class="D-scope"><div><strong>6 people</strong><span>cross-functional agile team I led</span></div><div><strong>20 people</strong><span>fire-grants workstream I supervised</span></div></div><p class="D-k D-navk D-scale">Platform scale</p><div class="D-nums">
+                    <div class="D-numc"><p class="D-numv">$7B+</p><p class="D-numl">grants processed</p></div>
+                    <div class="D-numc"><p class="D-numv">50</p><p class="D-numl">states served</p></div>
+                    <div class="D-numc"><p class="D-numv">40+</p><p class="D-numl">grant programs</p></div>
+                  </div>
+                  <div class="D-li"><span class="D-lin">1</span><span>Oversaw all UI work and served as the final reviewer of all UI code.</span></div>
+                  <div class="D-li"><span class="D-lin">2</span><span>Delivered the COVID-19 CARES Act funding opportunity in under a week, helping FEMA meet its congressional deadline.</span></div>
+                  <div class="D-li"><span class="D-lin">3</span><span>Worked directly with federal product owners and mentored engineers through 1:1s and code review.</span></div>
+                  <div class="D-chips"><span class="D-chip">React / Redux</span><span class="D-chip">Java Spring</span><span class="D-chip">Vert.x</span><span class="D-chip">PostgreSQL</span><span class="D-chip">AWS</span><span class="D-chip">Section 508</span></div>
+                </div>
+
+                <div class="D-t D-salt" style="grid-column:span 6">
+                  <div>
+                    <p class="D-k D-saltk">American Student Assistance · 2016–2018</p>
+                    <h2 class="D-h2">saltmoney.org</h2>
+                    <p class="D-saltp">Delivered the saltmoney.org rebrand as a front-end engineer, then stepped into the design role after a design team reorg. Prototyped React and React Native apps using OCR, AR and chatbot technology.</p>
+                    <div class="D-chips"><span class="D-chip">Front end</span><span class="D-chip">Design</span><span class="D-chip">React Native</span></div>
+                  </div>
+                  <div class="slot D-shot">saltmoney.org<br />rebrand screenshot</div>
+                </div>
+                <div class="D-t" style="grid-column:span 6">
+                  <h2 class="D-k" id="history">History</h2>
+                  <div class="D-row"><span class="D-yr">2026 — now</span><span>Founder &amp; Lead Engineer <span class="D-sub">· Fisherbird Software</span></span></div>
+                  <div class="D-row"><span class="D-yr">2022 — 26</span><span>BD Solution Architect <span class="D-sub">· OneGlobe LLC</span></span></div>
+                  <div class="D-row"><span class="D-yr">2021 — 22</span><span>Career break <span class="D-sub">· Travel, 25+ countries</span></span></div>
+                  <div class="D-row"><span class="D-yr">2018 — 21</span><span>Workstream Technical Lead <span class="D-sub">· OneGlobe LLC, FEMA GO</span></span></div>
+                  <div class="D-row"><span class="D-yr">2016 — 18</span><span>Front-End Engineer <span class="D-sub">· American Student Assistance</span></span></div>
+                  <div class="D-row"><span class="D-yr">2018</span><span>B.S. Computer Science <span class="D-sub">· Northeastern University</span></span></div>
+                </div>
+
+                <div id="contact" class="D-t D-red" style="grid-column:span 12">
+                  <p style="font:800 30px/1.1 'Manrope',sans-serif;letter-spacing:-.03em;margin:0">Get in touch.</p>
+                  <div class="D-redl"><a href="mailto:acherry125@gmail.com">acherry125@gmail.com</a><a href="https://www.linkedin.com/in/alexander-cherry">LinkedIn</a><a href="https://github.com/acherry125">GitHub</a><a href="#work">Résumé (PDF)</a></div>
+                </div>
+
+              </div>
+            </div></body></html>

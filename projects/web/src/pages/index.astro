@@ -1,18 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero';
-import Work from '../components/Work';
-import Career from '../components/Career';
-import SideProjects from '../components/SideProjects';
-import Footer from '../components/Footer';
-import StickyNav from '../components/StickyNav';
+import Portfolio from '../components/Portfolio';
 ---
 
-<Layout>
-  <StickyNav client:load />
-  <Hero client:load />
-  <Work client:visible />
-  <Career client:visible />
-  <SideProjects client:visible />
-  <Footer client:visible />
+<Layout
+  title="Alexander Cherry — Forward-deployed engineer"
+  description="Engineering, architecture and UI/UX. Alexander Cherry builds production software with stakeholders and leads delivery across federal platforms and consumer apps."
+  portfolio
+  skipTarget="main-content"
+>
+  <Portfolio />
 </Layout>
