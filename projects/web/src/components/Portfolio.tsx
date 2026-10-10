@@ -33,12 +33,12 @@ export default function Portfolio() {
             <p className="portfolio-location">Arlington, VA</p>
             <div className="portfolio-actions">
               <a
-                href="mailto:alexcherry.dev@gmail.com.com?subject=R%C3%A9sum%C3%A9%20request"
+                href="mailto:alexcherry.dev@gmail.com?subject=R%C3%A9sum%C3%A9%20request"
                 className="portfolio-primary"
               >
                 Request resume
               </a>
-              <a href="mailto:alexcherry.dev@gmail.com.com" className="portfolio-secondary">
+              <a href="mailto:alexcherry.dev@gmail.com" className="portfolio-secondary">
                 Email
               </a>
               <a
@@ -341,10 +341,10 @@ export default function Portfolio() {
               Get in touch.
             </h2>
             <div className="contact-links">
-              <a href="mailto:alexcherry.dev@gmail.com.com">alexcherry.dev@gmail.com.com</a>
+              <a href="mailto:alexcherry.dev@gmail.com">alexcherry.dev@gmail.com</a>
               <a href="https://www.linkedin.com/in/alexander-cherry">LinkedIn</a>
               <a href="https://github.com/acherry125">GitHub</a>
-              <a href="mailto:alexcherry.dev@gmail.com.com?subject=R%C3%A9sum%C3%A9%20request">
+              <a href="mailto:alexcherry.dev@gmail.com?subject=R%C3%A9sum%C3%A9%20request">
                 Request résumé
               </a>
             </div>
