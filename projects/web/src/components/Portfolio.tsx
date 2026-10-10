@@ -351,7 +351,8 @@ export default function Portfolio() {
           </section>
         </main>
         <footer className="portfolio-experiments">
-          <span>Earlier experiments</span>
+          <span>Selected projects</span>
+          <a href="/shelflife">ShelfLife</a>
           <a href="/the-city">The City</a>
           <a href="/worship">Worship</a>
         </footer>
