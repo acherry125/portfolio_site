@@ -14,17 +14,23 @@ yarn workspace @portfolio/infra build
 
 The build generates sharing cards and responsive screenshot files from existing source images. Generated files in public/seo and public/responsive are ignored in Git and copied into dist by Astro. The full-size screenshots remain available at their existing URLs. Dev startup also generates these assets.
 
-## Optional GA4 setup
+## PostHog setup
 
-Set PUBLIC_GA_MEASUREMENT_ID to the portfolio's GA4 web measurement ID in projects/web/.env.production or in the build environment. No analytics request is made when it is unset. The obsolete Universal Analytics tag has been removed.
+The production build defaults to the supplied portfolio public project token and `https://us.i.posthog.com`. The public configuration endpoint accepted that token on US Cloud; no test analytics events were sent. The token is safe for browser code. `PUBLIC_POSTHOG_KEY` and `PUBLIC_POSTHOG_HOST` remain optional build-time overrides for a different project; never use a personal API key (`phx_...`). The connected MCP account did not expose this project, so cookieless ingestion settings still require confirmation in its dashboard.
 
-The integration records ordinary page views and three intentional link actions:
+**Before deployment, enable cookieless event ingestion in that project's settings.** The SDK uses `cookieless_mode: 'always'`; PostHog ignores these events unless this setting is enabled. See [PostHog's configuration reference](https://posthog.com/docs/libraries/js/config).
 
-- resume_request for a résumé email request
-- contact_click for an ordinary email link
-- case_study_click for a link to a portfolio case study
+Capture is disabled on local or preview hostnames and when configuration is invalid. The browser SDK loads only on alexandercherry.com and www.alexandercherry.com. GA4 and Universal Analytics are removed.
 
-Custom event parameters contain only the page path, without email addresses, subjects, clicked link text, or query parameters. Confirm the configured property and events in GA4 Realtime/DebugView after deployment; mark résumé/contact events as key events in that property if desired.
+The integration records page views, page leaves (for engagement reporting), and three intentional link actions:
+
+- `resume_request` for a résumé email request
+- `contact_click` for an ordinary email link
+- `case_study_click` with a destination path for a portfolio case study
+
+Autocapture, session recording, surveys, heatmaps, automatic performance/error collection, person profiles, and feature-flag requests are disabled. No `identify` calls are made. Query strings/fragments are removed from page URLs, referrers are reduced to their origin, and an event/property allowlist excludes email addresses, subjects, link text, and campaign parameters. Referring domains remain useful; detailed UTM campaign attribution is intentionally unavailable.
+
+After deployment, verify real page views and each link action in the Portfolio project's activity feed. In Web Analytics, use the three custom events as conversion goals. Email clicks measure an attempted handoff, not a sent message or a completed recruiter conversation. Local checks do not prove live ingestion.
 
 ## Production changes requiring approval
 
@@ -41,4 +47,4 @@ Submit https://alexandercherry.com/sitemap.xml in Search Console. Inspect the ca
 
 Keep LinkedIn/GitHub website links pointed at the canonical origin. Add a factual link from Fisherbird's team/about content identifying Alexander Cherry as its engineer when updating that separate site. These account and company-site changes are outside this repository's deployment.
 
-No ranking gains, AI citations, or rich-result eligibility are asserted by the local tests. Rendered browser/Rich Results verification and live GA4 delivery still need to be checked after deployment.
+No ranking gains, AI citations, or rich-result eligibility are asserted by the local tests. Rendered browser/Rich Results verification and live PostHog delivery still need to be checked after deployment.
