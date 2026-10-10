@@ -63,6 +63,7 @@ export function posthogSettings(
   if (!host || !['https://us.i.posthog.com', 'https://eu.i.posthog.com'].includes(host)) return;
   return {
     api_host: host,
+    defaults: '2026-05-30',
     cookieless_mode: 'always',
     person_profiles: 'never',
     autocapture: false,
@@ -72,6 +73,7 @@ export function posthogSettings(
     disable_surveys: true,
     disable_scroll_properties: true,
     capture_performance: false,
+    capture_exceptions: false,
     capture_dead_clicks: false,
     rageclick: false,
     enable_heatmaps: false,
