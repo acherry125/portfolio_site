@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EngineeringCaseStudy from '../components/EngineeringCaseStudy';
+import { oneGlobe } from '../lib/engineering-projects';
+---
+
+<Layout portfolio skipTarget="project-content">
+  <EngineeringCaseStudy project={oneGlobe} />
+</Layout>

@@ -38,3 +38,7 @@ yarn-error.log*
 
 # Isolated worktrees
 .worktrees/
+
+# Generated SEO and responsive images
+projects/web/public/seo/
+projects/web/public/responsive/

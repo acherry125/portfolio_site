@@ -44,6 +44,8 @@ scripts/
   infra.sh        Wrapper around pulumi preview / up
 ```
 
+SEO setup, optional GA4 measurement, and the approval-gated redirect rollout are documented in [docs/seo/rollout.md](docs/seo/rollout.md).
+
 Design tokens (colors, fonts, easing) live in `:root` inside the web workspace's
 `src/layouts/Layout.astro`. Component styles are co-located as `<style>` tags
 within each `.tsx` component.

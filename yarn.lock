@@ -1529,6 +1529,7 @@ __metadata:
     prettier-plugin-astro: "npm:^0.14.1"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
+    sharp: "npm:0.34.5"
     typescript: "npm:^6.0.2"
   languageName: unknown
   linkType: soft
@@ -7827,7 +7828,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.34.0":
+"sharp@npm:0.34.5, sharp@npm:^0.34.0":
   version: 0.34.5
   resolution: "sharp@npm:0.34.5"
   dependencies:

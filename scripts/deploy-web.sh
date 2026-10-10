@@ -28,14 +28,23 @@ cd "$WEB_DIR"
 yarn build
 
 echo "→ Syncing to S3 (s3://$BUCKET)"
+# Stable URLs (including robots and sitemap) must be able to refresh.
+aws s3 sync dist/ "s3://$BUCKET" \
+  --profile "$PROFILE" \
+  --delete \
+  --cache-control "public, max-age=3600" \
+  --exclude "_astro/*" \
+  --exclude "*.html" \
+  --exclude ".DS_Store"
+
+# Astro fingerprints these assets, so their URLs change with their contents.
 aws s3 sync dist/ "s3://$BUCKET" \
   --profile "$PROFILE" \
   --delete \
   --cache-control "public, max-age=31536000, immutable" \
-  --exclude "*.html" \
-  --exclude ".DS_Store"
+  --exclude "*" \
+  --include "_astro/*"
 
-# HTML should not be cached aggressively
 aws s3 sync dist/ "s3://$BUCKET" \
   --profile "$PROFILE" \
   --delete \

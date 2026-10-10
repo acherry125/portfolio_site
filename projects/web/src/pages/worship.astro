@@ -2,15 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout
-  title="Worship — Alexander Cherry"
-  description="A village-god simulator built in Java: resource allocation, belief systems, and natural disasters."
->
+<Layout>
   <div class="page">
     <nav class="page-nav">
       <a href="/" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5M12 5l-7 7 7 7"></path>
         </svg>
         Alexander Cherry
       </a>
@@ -53,8 +60,8 @@ import Layout from '../layouts/Layout.astro';
           those powers aren't infinite. They run on belief.
         </p>
         <p class="body-text">
-          If the people believe, they'll do as you say and you can grant them miracles. If they
-          lose faith, your powers slowly wither. The game is built around this tension: intervention
+          If the people believe, they'll do as you say and you can grant them miracles. If they lose
+          faith, your powers slowly wither. The game is built around this tension: intervention
           costs belief, but doing nothing costs survival.
         </p>
         <p class="body-text">
@@ -111,7 +118,9 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     color: var(--ink);
     opacity: 0.5;
-    transition: opacity 200ms var(--ease-out), color 200ms var(--ease-out);
+    transition:
+      opacity 200ms var(--ease-out),
+      color 200ms var(--ease-out);
   }
 
   .back-link:hover {

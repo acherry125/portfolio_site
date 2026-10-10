@@ -674,3 +674,13 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.case-study-link {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.case-study-link a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
