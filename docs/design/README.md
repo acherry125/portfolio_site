@@ -8,4 +8,4 @@ The existing The City and Worship routes and their assets remain available throu
 
 The TSX component uses a colocated scoped Portfolio.css stylesheet.
 
-ShelfLife images match the three files used by the marketing download page in `fisherbird-shelf/apps/marketing`: `screenshot-home-feed-02.webp`, `screenshot-shelf-export-02.webp`, and `screenshot-book-signal.webp`. The standalone prototype references the same local assets.
+ShelfLife images match the first three carousel images on the marketing homepage, defined in `fisherbird-shelf/apps/marketing/src/components/Showcase.astro`: `screens/shelf-canvas.webp`, `screens/home-feed.webp`, and `screens/signal-hub.webp`, in that order. The standalone prototype references the same local assets.

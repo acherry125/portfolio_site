@@ -85,8 +85,8 @@ export default function Portfolio() {
                 </div>
                 <div className="product-screenshots">
                   <img
-                    src="/portfolio/shelflife-home-feed.webp"
-                    alt="ShelfLife home feed"
+                    src="/portfolio/shelflife-shelf-canvas.webp"
+                    alt="ShelfLife shelf canvas with book spines, stacks and decor"
                     className="product-photo"
                     loading="eager"
                     decoding="async"
@@ -94,8 +94,8 @@ export default function Portfolio() {
                     height={1782}
                   />
                   <img
-                    src="/portfolio/shelflife-shelf-export.webp"
-                    alt="ShelfLife shelf export"
+                    src="/portfolio/shelflife-home-feed.webp"
+                    alt="ShelfLife home feed"
                     className="product-photo"
                     loading="lazy"
                     decoding="async"
@@ -104,7 +104,7 @@ export default function Portfolio() {
                   />
                   <img
                     src="/portfolio/shelflife-book-signal.webp"
-                    alt="ShelfLife Book Signal"
+                    alt="ShelfLife Book Signal hub with requests from other readers"
                     className="product-photo"
                     loading="lazy"
                     decoding="async"
