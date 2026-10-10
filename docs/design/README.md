@@ -7,3 +7,5 @@ The production TSX adaptation uses local product images, semantic landmarks, res
 The existing The City and Worship routes and their assets remain available through secondary footer links. No infrastructure or deployment changes.
 
 The TSX component uses a colocated scoped Portfolio.css stylesheet.
+
+ShelfLife images match the three files used by the marketing download page in `fisherbird-shelf/apps/marketing`: `screenshot-home-feed-02.webp`, `screenshot-shelf-export-02.webp`, and `screenshot-book-signal.webp`. The standalone prototype references the same local assets.
