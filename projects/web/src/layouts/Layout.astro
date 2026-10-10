@@ -12,10 +12,8 @@ interface Props {
 
 const page = getPage(Astro.url.pathname);
 const canonical = SITE_URL + page.path;
-const gaId =
-  import.meta.env.PROD && /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '')
-    ? import.meta.env.PUBLIC_GA_MEASUREMENT_ID
-    : undefined;
+const posthogToken = import.meta.env.PROD ? import.meta.env.PUBLIC_POSTHOG_KEY : undefined;
+const posthogHost = import.meta.env.PROD ? import.meta.env.PUBLIC_POSTHOG_HOST : undefined;
 const {
   title = page.title,
   description = page.description,
@@ -26,7 +24,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-ga-id={gaId}>
+<html lang="en" data-posthog-key={posthogToken} data-posthog-host={posthogHost}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -85,7 +83,8 @@ const {
     }
     <script>
       import { initializeAnalytics } from '../scripts/analytics';
-      initializeAnalytics(document.documentElement.dataset.gaId);
+      const { posthogKey, posthogHost } = document.documentElement.dataset;
+      void initializeAnalytics(posthogKey, posthogHost);
     </script>
   </head>
   <body style={portfolio ? 'background: #f3f1ec' : undefined}>
