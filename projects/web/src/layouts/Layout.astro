@@ -12,8 +12,12 @@ interface Props {
 
 const page = getPage(Astro.url.pathname);
 const canonical = SITE_URL + page.path;
-const posthogToken = import.meta.env.PROD ? import.meta.env.PUBLIC_POSTHOG_KEY : undefined;
-const posthogHost = import.meta.env.PROD ? import.meta.env.PUBLIC_POSTHOG_HOST : undefined;
+const posthogToken = import.meta.env.PROD
+  ? import.meta.env.PUBLIC_POSTHOG_KEY || 'phc_wpREi9nbPvLaCaBDmSeccPLZFc3YNzDvz9spetBtxmcH'
+  : undefined;
+const posthogHost = import.meta.env.PROD
+  ? import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com'
+  : undefined;
 const {
   title = page.title,
   description = page.description,

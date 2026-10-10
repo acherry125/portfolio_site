@@ -16,11 +16,11 @@ The build generates sharing cards and responsive screenshot files from existing 
 
 ## PostHog setup
 
-Use a dedicated Portfolio project, separate from ShelfLife and WanderCrew. Set `PUBLIC_POSTHOG_KEY` to its public project token (`phc_...`) and `PUBLIC_POSTHOG_HOST` to `https://us.i.posthog.com` or `https://eu.i.posthog.com`, matching the project's region, in `projects/web/.env.production` or the build environment. Never use a personal API key (`phx_...`).
+The production build defaults to the supplied portfolio public project token and `https://us.i.posthog.com`. The public configuration endpoint accepted that token on US Cloud; no test analytics events were sent. The token is safe for browser code. `PUBLIC_POSTHOG_KEY` and `PUBLIC_POSTHOG_HOST` remain optional build-time overrides for a different project; never use a personal API key (`phx_...`). The connected MCP account did not expose this project, so cookieless ingestion settings still require confirmation in its dashboard.
 
 **Before deployment, enable cookieless event ingestion in that project's settings.** The SDK uses `cookieless_mode: 'always'`; PostHog ignores these events unless this setting is enabled. See [PostHog's configuration reference](https://posthog.com/docs/libraries/js/config).
 
-Capture is disabled without a valid token/host and on local or preview hostnames. The browser SDK loads only on alexandercherry.com and www.alexandercherry.com. GA4 and Universal Analytics are removed.
+Capture is disabled on local or preview hostnames and when configuration is invalid. The browser SDK loads only on alexandercherry.com and www.alexandercherry.com. GA4 and Universal Analytics are removed.
 
 The integration records page views, page leaves (for engagement reporting), and three intentional link actions:
 
