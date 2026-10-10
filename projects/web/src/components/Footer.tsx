@@ -95,7 +95,7 @@ export default function Footer() {
           >
             <LinkedInIcon /> LinkedIn
           </a>
-          <a className="contact-link" href="mailto:acherry125@gmail.com" aria-label="Send email">
+          <a className="contact-link" href="mailto:alexcherry.dev@gmail.com" aria-label="Send email">
             <EmailIcon /> Email
           </a>
         </nav>
