@@ -2,15 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout
-  title="The City — Alexander Cherry"
-  description="A text-adventure game exploring a war-torn Boston City Hall, built in React."
->
+<Layout>
   <div class="page">
     <nav class="page-nav">
       <a href="/" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5M12 5l-7 7 7 7"></path>
         </svg>
         Alexander Cherry
       </a>
@@ -24,8 +31,8 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <h1 class="project-title">The <span class="accent">City</span></h1>
       <p class="project-lead">
-        A text-adventure game set in a war-torn Boston City Hall. Built as a narrative experiment
-        in React: branching storylines, immersive styling, and original writing.
+        A text-adventure game set in a war-torn Boston City Hall. Built as a narrative experiment in
+        React: branching storylines, immersive styling, and original writing.
       </p>
     </header>
 
@@ -98,7 +105,9 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     color: var(--ink);
     opacity: 0.5;
-    transition: opacity 200ms var(--ease-out), color 200ms var(--ease-out);
+    transition:
+      opacity 200ms var(--ease-out),
+      color 200ms var(--ease-out);
   }
 
   .back-link:hover {

@@ -1,28 +1,37 @@
 ---
 import glassesIcon from '../assets/glasses.svg?url';
+import { SITE_URL, getPage, pageSchema } from '../lib/site.mjs';
 
 interface Props {
   title?: string;
   description?: string;
   portfolio?: boolean;
   skipTarget?: string;
+  fonts?: 'portfolio' | 'case-study' | 'legacy';
 }
 
+const page = getPage(Astro.url.pathname);
+const canonical = SITE_URL + page.path;
+const gaId =
+  import.meta.env.PROD && /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '')
+    ? import.meta.env.PUBLIC_GA_MEASUREMENT_ID
+    : undefined;
 const {
-  title = 'Alexander Cherry — Developer & Consultant',
-  description = 'From first conversation to shipped product. Full-stack development, AI-powered features, and cloud infrastructure, end to end.',
+  title = page.title,
+  description = page.description,
   portfolio = false,
   skipTarget = 'work',
+  fonts = portfolio ? 'portfolio' : 'legacy',
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ga-id={gaId}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href={glassesIcon} />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href={canonical} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Alexander Cherry" />
@@ -31,36 +40,52 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Alexander Cherry" />
+    <meta property="og:image" content={`${SITE_URL}/seo/${page.image}.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={page.imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${SITE_URL}/seo/${page.image}.png`} />
+    <meta name="twitter:image:alt" content={page.imageAlt} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(pageSchema(page)).replace(/</g, '\u003c')}
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-      rel="stylesheet"
-    />
-
     {
-      portfolio && (
+      fonts === 'legacy' && (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+          rel="stylesheet"
+        />
+      )
+    }
+    {
+      fonts !== 'legacy' && (
         <link
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       )
     }
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108515497-1"></script>
+    {
+      fonts === 'case-study' && (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
+      )
+    }
     <script>
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any).dataLayer = (window as any).dataLayer || [];
-
-      function gtag(...args: unknown[]) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ((window as any).dataLayer as unknown[]).push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-108515497-1');
+      import { initializeAnalytics } from '../scripts/analytics';
+      initializeAnalytics(document.documentElement.dataset.gaId);
     </script>
   </head>
   <body style={portfolio ? 'background: #f3f1ec' : undefined}>

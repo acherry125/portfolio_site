@@ -1,4 +1,5 @@
 import GlassesLogo from './GlassesLogo';
+import ResponsiveImage from './ResponsiveImage';
 import './ShelfLifeCaseStudy.css';
 
 type Screen = {
@@ -155,7 +156,7 @@ function Screenshot({ screen, eager = false }: { screen: Screen; eager?: boolean
         rel="noopener noreferrer"
         aria-label={`${screen.caption} Open full-size screenshot in a new tab.`}
       >
-        <img
+        <ResponsiveImage
           src={screen.src}
           alt={screen.alt}
           width={screen.width}

@@ -1,4 +1,5 @@
 import GlassesLogo from './GlassesLogo';
+import ResponsiveImage from './ResponsiveImage';
 import './Portfolio.css';
 
 export default function Portfolio() {
@@ -84,28 +85,31 @@ export default function Portfolio() {
                   </a>
                 </div>
                 <div className="product-screenshots">
-                  <img
+                  <ResponsiveImage
                     src="/portfolio/shelflife-shelf-canvas.webp"
                     alt="ShelfLife shelf canvas with book spines, stacks and decor"
                     className="product-photo"
+                    sizes="(max-width: 600px) 30vw, 120px"
                     loading="eager"
                     decoding="async"
                     width={820}
                     height={1782}
                   />
-                  <img
+                  <ResponsiveImage
                     src="/portfolio/shelflife-home-feed.webp"
                     alt="ShelfLife home feed"
                     className="product-photo"
+                    sizes="(max-width: 600px) 30vw, 120px"
                     loading="lazy"
                     decoding="async"
                     width={820}
                     height={1782}
                   />
-                  <img
+                  <ResponsiveImage
                     src="/portfolio/shelflife-book-signal.webp"
                     alt="ShelfLife Book Signal hub with requests from other readers"
                     className="product-photo"
+                    sizes="(max-width: 600px) 30vw, 120px"
                     loading="lazy"
                     decoding="async"
                     width={820}
@@ -124,7 +128,7 @@ export default function Portfolio() {
                 </div>
               </article>
               <article className="product">
-                <img
+                <ResponsiveImage
                   src="/portfolio/wandercrew-badge.webp"
                   alt="WanderCrew"
                   style={{ width: '64px', marginBottom: '14px' }}
@@ -182,6 +186,9 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
+            <p className="case-study-link">
+              <a href="/oneglobe/">See the OneGlobe case study</a>
+            </p>
             <div className="portfolio-chips">
               <span className="portfolio-chip">React</span>
               <span className="portfolio-chip">TypeScript</span>
@@ -252,6 +259,9 @@ export default function Portfolio() {
                 </span>
               </li>
             </ol>
+            <p className="case-study-link">
+              <a href="/fema-go/">See the FEMA GO case study</a>
+            </p>
             <div className="portfolio-chips">
               <span className="portfolio-chip">React / Redux</span>
               <span className="portfolio-chip">Java Spring</span>
@@ -349,7 +359,9 @@ export default function Portfolio() {
         </main>
         <footer className="portfolio-experiments">
           <span>Selected projects</span>
-          <a href="/shelflife">ShelfLife</a>
+          <a href="/shelflife/">ShelfLife</a>
+          <a href="/fema-go/">FEMA GO</a>
+          <a href="/oneglobe/">OneGlobe</a>
           <a href="/the-city">The City</a>
           <a href="/worship">Worship</a>
         </footer>
