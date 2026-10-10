@@ -83,6 +83,11 @@
   margin: 0 0 22px;
   text-wrap: pretty;
 }
+.portfolio-location {
+  margin: 0 0 22px;
+  font-size: 14px;
+  color: #57504a;
+}
 .portfolio-actions {
   display: flex;
   gap: 10px;

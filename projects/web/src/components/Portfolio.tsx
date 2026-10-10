@@ -24,12 +24,13 @@ export default function Portfolio() {
             <h1 id="identity-title" className="portfolio-name">
               Alexander Cherry
             </h1>
-            <p className="portfolio-role">Forward-deployed engineer</p>
+            <p className="portfolio-role">Product engineer &amp; technical leader</p>
             <p className="portfolio-bio">
-              I turn conversations into working software, from architecture and UI/UX to hands-on
-              delivery. Eight years in production software, across federal platforms and consumer
-              apps. Arlington, VA.
+              I work directly with customers and stakeholders to turn problems into shipped
+              products. My work spans engineering, architecture and UI/UX, across federal platforms
+              and consumer apps.
             </p>
+            <p className="portfolio-location">Arlington, VA</p>
             <div className="portfolio-actions">
               <a
                 href="mailto:acherry125@gmail.com?subject=R%C3%A9sum%C3%A9%20request"
