@@ -171,3 +171,41 @@ test("initializer skips local traffic and captures one pageview plus intentional
   assert.equal(captures[2].properties.destination_path, "/fema-go/");
   assert.ok(!JSON.stringify(captures).includes("alex@example.com"));
 });
+
+test("cookieless hash inputs survive sanitization for every captured event", () => {
+  for (const event of [
+    "$pageview",
+    "$pageleave",
+    "resume_request",
+    "contact_click",
+    "case_study_click",
+  ]) {
+    const raw = {
+      event,
+      timestamp: "2026-10-10T20:00:00.000Z",
+      properties: {
+        token: "phc_test",
+        distinct_id: "$posthog_cookieless",
+        $cookieless_mode: true,
+        $host: "www.alexandercherry.com",
+        $raw_user_agent: "Mozilla/5.0 Chrome/145.0.0.0 Safari/537.36",
+        $current_url: "https://www.alexandercherry.com/?private=secret",
+        email: "private@example.com",
+      },
+    };
+    const clean = sanitizeEvent(raw);
+    assert.equal(
+      clean.properties.$raw_user_agent,
+      raw.properties.$raw_user_agent,
+      `${event}: PostHog drops cookieless events without the user agent`,
+    );
+    assert.equal(clean.properties.$host, raw.properties.$host);
+    assert.equal(clean.properties.$cookieless_mode, true);
+    assert.equal(clean.timestamp, raw.timestamp);
+    assert.equal(clean.properties.email, undefined);
+    assert.equal(
+      clean.properties.$current_url,
+      "https://www.alexandercherry.com/",
+    );
+  }
+});

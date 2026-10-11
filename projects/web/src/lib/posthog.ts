@@ -14,6 +14,8 @@ const properties = new Set([
   '$session_id',
   '$window_id',
   '$cookieless_mode',
+  // Required by PostHog to compute cookieless identity during ingestion.
+  '$raw_user_agent',
   '$process_person_profile',
   '$lib',
   '$lib_version',
